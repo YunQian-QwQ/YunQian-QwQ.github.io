@@ -9,7 +9,7 @@
 <meta name="description" content="欢迎来到这个即将结束而又忙碌，可是却毫无救赎的世界。">
 <meta name="theme-color" content="#000">
 <title>云浅的小窝</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1595422260618">
+<link rel="shortcut icon" href="/favicon.ico?v=1595426327391">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -209,7 +209,7 @@
       <div class="sidebar-item">
         <span class="site-item-rss">
             <i class="fa fa-rss"></i>
-            <a href="https://yunqian-qwq.github.io/atom.xml" target="_blank">RSS</a>
+            <a href="http://localhost:4000/atom.xml" target="_blank">RSS</a>
         </span>
       </div>
     
@@ -281,7 +281,7 @@
         </div>    
         
       
-      <a href="https://yunqian-qwq.github.io/post/ti-jie-p1928-wai-xing-mi-ma/">
+      <a href="http://localhost:4000/post/ti-jie-p1928-wai-xing-mi-ma/">
         <div class="motion-warpper tag-archive-node">
           <div class="tag-node">
             <h1>
@@ -294,7 +294,7 @@
     
       
       
-      <a href="https://yunqian-qwq.github.io/post/ti-jie-sp10500-haybale-haybale-stacking/">
+      <a href="http://localhost:4000/post/ti-jie-sp10500-haybale-haybale-stacking/">
         <div class="motion-warpper tag-archive-node">
           <div class="tag-node">
             <h1>
@@ -307,7 +307,7 @@
     
       
       
-      <a href="https://yunqian-qwq.github.io/post/ti-jie-cf1102e-monotonic-renumeration/">
+      <a href="http://localhost:4000/post/ti-jie-cf1102e-monotonic-renumeration/">
         <div class="motion-warpper tag-archive-node">
           <div class="tag-node">
             <h1>
@@ -320,7 +320,7 @@
     
       
       
-      <a href="https://yunqian-qwq.github.io/post/ti-jie-cf478b-random-teams/">
+      <a href="http://localhost:4000/post/ti-jie-cf478b-random-teams/">
         <div class="motion-warpper tag-archive-node">
           <div class="tag-node">
             <h1>
@@ -333,7 +333,7 @@
     
       
       
-      <a href="https://yunqian-qwq.github.io/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/">
+      <a href="http://localhost:4000/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/">
         <div class="motion-warpper tag-archive-node">
           <div class="tag-node">
             <h1>
@@ -346,7 +346,7 @@
     
       
       
-      <a href="https://yunqian-qwq.github.io/post/huan-ying/">
+      <a href="http://localhost:4000/post/huan-ying/">
         <div class="motion-warpper tag-archive-node">
           <div class="tag-node">
             <h1>
@@ -408,562 +408,6 @@
   </div>
   
   
-  
-  
-<link rel="stylesheet" href="/media/live2d/css/live2d.css" />
-<div class="box-scale">
-  <div id="landlord" style="left: 5px;bottom: px;"
-    data-key="">
-    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
-    
-
-      <div class="message" style="opacity:0"></div>
-      <div class="live_talk_input_body">
-        <div class="live_talk_input_name_body">
-          <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off"
-            placeholder="你的名字" />
-        </div>
-        <div class="live_talk_input_text_body">
-          <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off"
-            placeholder="要和我聊什么呀？" />
-          <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
-        </div>
-      </div>
-      <input name="live_talk" id="live_talk" value="1" type="hidden" />
-      <div class="live_ico_box">
-        <div class="live_ico_item type_info" id="showInfoBtn"></div>
-        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
-        
-        <div class="live_ico_item type_music" id="musicButton"></div>
-        
-        <div class="live_ico_item type_youdu" id="youduButton"></div>
-        <div class="live_ico_item type_quit" id="hideButton"></div>
-        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
-        <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
-        <input id="duType" value="douqilai" type="hidden">
-        
-        <input name="live2dBGM" value="https://music.163.com/song?id=528568223" type="hidden">
-        
-        <input name="live2dBGM" value="https://music.163.com/song?id=508042850" type="hidden">
-        
-        <input name="live2dBGM" value="https://music.163.com/song?id=569587107" type="hidden">
-        
-        <input name="live2dBGM" value="https://music.163.com/song?id=514416805" type="hidden">
-        
-        <input name="live2dBGM" value="https://music.163.com/song?id=563368447" type="hidden">
-        
-        <input name="live2dBGM" value="https://music.163.com/song?id=548619916" type="hidden">
-        
-        <input name="live2dBGM" value="https://music.163.com/song?id=570821513" type="hidden">
-        
-      </div>
-    
-  </div>
-</div>
-<div id="open_live2d">召唤看板娘</div>
-<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-<script>
-  var message_Path = 'https://cdn.jsdelivr.net/gh/hsxyhao/live2d.github.io@master/';
-  let landlord = document.querySelector('#landlord');
-  var apiKey = landlord.dataset.key;
-</script>
-<script type="text/javascript" src="/media/live2d/js/live2d.js"></script>
-<script>
-	var home_Path = document.location.protocol + '//' + window.document.location.hostname + ":" + window.document.location.port + '/';
-	var userAgent = window.navigator.userAgent.toLowerCase();
-	var norunAI = ["android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser", "msie", "trident/7.0"];
-	var norunFlag = false;
-
-	for (var i = 0; i < norunAI.length; i++) {
-		if (userAgent.indexOf(norunAI[i]) > -1) {
-			norunFlag = true;
-			break;
-		}
-	}
-
-	if (!window.WebGLRenderingContext) {
-		norunFlag = true;
-	}
-
-	if (!norunFlag) {
-		var hitFlag = false;
-		var AIFadeFlag = false;
-		var liveTlakTimer = null;
-		var sleepTimer_ = null;
-		var AITalkFlag = false;
-		var talkNum = 0;
-		(function () {
-			function renderTip(template, context) {
-				var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
-				return template.replace(tokenReg, function (word, slash1, token, slash2) {
-					if (slash1 || slash2) {
-						return word.replace('\\', '');
-					}
-					var variables = token.replace(/\s/g, '').split('.');
-					var currentObject = context;
-					var i, length, variable;
-					for (i = 0, length = variables.length; i < length; ++i) {
-						variable = variables[i];
-						currentObject = currentObject[variable];
-						if (currentObject === undefined || currentObject === null) return '';
-					}
-					return currentObject;
-				});
-			}
-
-			String.prototype.renderTip = function (context) {
-				return renderTip(this, context);
-			};
-
-			var re = /x/;
-			re.toString = function () {
-				showMessage('哈哈，你打开了控制台，是想要看看我的秘密吗？', 5000);
-				return '';
-			};
-
-			$(document).on('copy', function () {
-				showMessage('你都复制了些什么呀，转载要记得加上出处哦~~', 5000);
-			});
-
-			function initTips() {
-				$.ajax({
-					cache: true,
-					url: message_Path + 'message.json',
-					dataType: "json",
-					success: function (result) {
-						$.each(result.mouseover, function (index, tips) {
-							$(tips.selector).mouseover(function () {
-								var text = tips.text;
-								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
-								text = text.renderTip({ text: $(this).text() });
-								showMessage(text, 3000);
-								talkValTimer();
-								clearInterval(liveTlakTimer);
-								liveTlakTimer = null;
-							});
-							$(tips.selector).mouseout(function () {
-								showHitokoto();
-								if (liveTlakTimer == null) {
-									liveTlakTimer = window.setInterval(function () {
-										showHitokoto();
-									}, 15000);
-								};
-							});
-						});
-						$.each(result.click, function (index, tips) {
-							$(tips.selector).click(function () {
-								if (hitFlag) {
-									return false
-								}
-								hitFlag = true;
-								setTimeout(function () {
-									hitFlag = false;
-								}, 8000);
-								var text = tips.text;
-								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
-								text = text.renderTip({ text: $(this).text() });
-								showMessage(text, 3000);
-							});
-							clearInterval(liveTlakTimer);
-							liveTlakTimer = null;
-							if (liveTlakTimer == null) {
-								liveTlakTimer = window.setInterval(function () {
-									showHitokoto();
-								}, 15000);
-							};
-						});
-					}
-				});
-			}
-			initTips();
-
-			var text;
-			if (document.referrer !== '') {
-				var referrer = document.createElement('a');
-				referrer.href = document.referrer;
-				text = '嗨！来自 <span style="color:#0099cc;">' + referrer.hostname + '</span> 的朋友！';
-				var domain = referrer.hostname.split('.')[1];
-				if (domain == 'baidu') {
-					text = '嗨！ 来自 百度搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
-				} else if (domain == 'so') {
-					text = '嗨！ 来自 360搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
-				} else if (domain == 'google') {
-					text = '嗨！ 来自 谷歌搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
-				}
-			} else {
-				if (window.location.href == home_Path) { //主页URL判断，需要斜杠结尾
-					var now = (new Date()).getHours();
-					if (now > 23 || now <= 5) {
-						text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛？';
-					} else if (now > 5 && now <= 7) {
-						text = '早上好！一日之计在于晨，美好的一天就要开始了！';
-					} else if (now > 7 && now <= 11) {
-						text = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
-					} else if (now > 11 && now <= 14) {
-						text = '中午了，工作了一个上午，现在是午餐时间！';
-					} else if (now > 14 && now <= 17) {
-						text = '午后很容易犯困呢，今天的运动目标完成了吗？';
-					} else if (now > 17 && now <= 19) {
-						text = '傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~~';
-					} else if (now > 19 && now <= 21) {
-						text = '晚上好，今天过得怎么样？';
-					} else if (now > 21 && now <= 23) {
-						text = '已经这么晚了呀，早点休息吧，晚安~~';
-					} else {
-						text = '嗨~ 快来逗我玩吧！';
-					}
-				} else {
-					text = '欢迎阅读<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
-				}
-			}
-			showMessage(text, 12000);
-		})();
-
-		liveTlakTimer = setInterval(function () {
-			showHitokoto();
-		}, 15000);
-
-		function showHitokoto() {
-			if (sessionStorage.getItem("Sleepy") !== "1") {
-				if (!AITalkFlag) {
-					$.getJSON('https://v1.hitokoto.cn/', function (result) {
-						talkValTimer();
-						showMessage(result.hitokoto, 0);
-					});
-				}
-			} else {
-				hideMessage(0);
-				if (sleepTimer_ == null) {
-					sleepTimer_ = setInterval(function () {
-						checkSleep();
-					}, 200);
-				}
-			}
-		}
-
-		function checkSleep() {
-			var sleepStatu = sessionStorage.getItem("Sleepy");
-			if (sleepStatu !== '1') {
-				talkValTimer();
-				showMessage('你回来啦~', 0);
-				clearInterval(sleepTimer_);
-				sleepTimer_ = null;
-			}
-		}
-
-		function showMessage(text, timeout) {
-			if (Array.isArray(text)) text = text[Math.floor(Math.random() * text.length + 1) - 1];
-			$('.message').stop();
-			$('.message').html(text);
-			$('.message').fadeTo(200, 1);
-			//if (timeout === null) timeout = 5000;
-			//hideMessage(timeout);
-		}
-		function talkValTimer() {
-			$('#live_talk').val('1');
-		}
-
-		function hideMessage(timeout) {
-			//$('.message').stop().css('opacity',1);
-			if (timeout === null) timeout = 5000;
-			$('.message').delay(timeout).fadeTo(200, 0);
-		}
-
-		function initLive2d() {
-			$('#hideButton').on('click', function () {
-				if (AIFadeFlag) {
-					return false;
-				} else {
-					AIFadeFlag = true;
-					localStorage.setItem("live2dhidden", "0");
-					$('#landlord').fadeOut(200);
-					$('#open_live2d').delay(200).fadeIn(200);
-					setTimeout(function () {
-						AIFadeFlag = false;
-					}, 300);
-				}
-			});
-			$('#open_live2d').on('click', function () {
-				if (AIFadeFlag) {
-					return false;
-				} else {
-					AIFadeFlag = true;
-					localStorage.setItem("live2dhidden", "1");
-					$('#open_live2d').fadeOut(200);
-					$('#landlord').delay(200).fadeIn(200);
-					setTimeout(function () {
-						AIFadeFlag = false;
-					}, 300);
-				}
-			});
-			$('#youduButton').on('click', function () {
-				if ($('#youduButton').hasClass('doudong')) {
-					var typeIs = $('#youduButton').attr('data-type');
-					$('#youduButton').removeClass('doudong');
-					$('body').removeClass(typeIs);
-					$('#youduButton').attr('data-type', '');
-				} else {
-					var duType = $('#duType').val();
-					var duArr = duType.split(",");
-					var dataType = duArr[Math.floor(Math.random() * duArr.length)];
-
-					$('#youduButton').addClass('doudong');
-					$('#youduButton').attr('data-type', dataType);
-					$('body').addClass(dataType);
-				}
-			});
-			if (apiKey) {
-				$('#showInfoBtn').on('click', function () {
-					var live_statu = $('#live_statu_val').val();
-					if (live_statu == "0") {
-						return
-					} else {
-						$('#live_statu_val').val("0");
-						$('.live_talk_input_body').fadeOut(500);
-						AITalkFlag = false;
-						showHitokoto();
-						$('#showTalkBtn').show();
-						$('#showInfoBtn').hide();
-					}
-				});
-				$('#showTalkBtn').on('click', function () {
-					var live_statu = $('#live_statu_val').val();
-					if (live_statu == "1") {
-						return
-					} else {
-						$('#live_statu_val').val("1");
-						$('.live_talk_input_body').fadeIn(500);
-						AITalkFlag = true;
-						$('#showTalkBtn').hide();
-						$('#showInfoBtn').show();
-
-					}
-				});
-				$('#talk_send').on('click', function () {
-					var info_ = $('#AIuserText').val();
-					var userid_ = $('#AIuserName').val();
-					if (info_ == "") {
-						showMessage('写点什么吧！', 0);
-						return;
-					}
-					if (userid_ == "") {
-						showMessage('聊之前请告诉我你的名字吧！', 0);
-						return;
-					}
-					showMessage('思考中~', 0);
-					let protocol = window.location.protocol.indexOf("s") > 0 ? "https" : "http";
-					$.ajax({
-						type: "get",
-						url: `${protocol}://www.tuling123.com/openapi/api?key=${apiKey}&info=${info_}`,
-						dataType: "json",
-						success: function (res) {
-							talkValTimer();
-							showMessage(res.text, 0);
-							$('#AIuserText').val("");
-							sessionStorage.setItem("live2duser", userid_);
-						},
-						error: function (e) {
-							talkValTimer();
-							showMessage('似乎有什么错误，请和站长联系！', 0);
-						}
-					});
-				});
-			} else {
-				$('#showInfoBtn').hide();
-				$('#showTalkBtn').hide();
-			}
-			//获取音乐信息初始化
-			var bgmListInfo = $('input[name=live2dBGM]');
-			if (bgmListInfo.length == 0) {
-				$('#musicButton').hide();
-			} else {
-				var bgmPlayNow = parseInt($('#live2d_bgm').attr('data-bgm'));
-				var bgmPlayTime = 0;
-				var live2dBGM_Num = sessionStorage.getItem("live2dBGM_Num");
-				var live2dBGM_PlayTime = sessionStorage.getItem("live2dBGM_PlayTime");
-				if (live2dBGM_Num) {
-					if (live2dBGM_Num <= $('input[name=live2dBGM]').length - 1) {
-						bgmPlayNow = parseInt(live2dBGM_Num);
-					}
-				}
-				if (live2dBGM_PlayTime) {
-					bgmPlayTime = parseInt(live2dBGM_PlayTime);
-				}
-				var live2dBGMSrc = bgmListInfo.eq(bgmPlayNow).val();
-				$('#live2d_bgm').attr('data-bgm', bgmPlayNow);
-				$('#live2d_bgm').attr('src', live2dBGMSrc);
-				$('#live2d_bgm')[0].currentTime = bgmPlayTime;
-				$('#live2d_bgm')[0].volume = 0.5;
-				var live2dBGM_IsPlay = sessionStorage.getItem("live2dBGM_IsPlay");
-				var live2dBGM_WindowClose = sessionStorage.getItem("live2dBGM_WindowClose");
-				if (live2dBGM_IsPlay == '0' && live2dBGM_WindowClose == '0') {
-					$('#live2d_bgm')[0].play();
-					$('#musicButton').addClass('play');
-				}
-				sessionStorage.setItem("live2dBGM_WindowClose", '1');
-				$('#musicButton').on('click', function () {
-					if ($('#musicButton').hasClass('play')) {
-						$('#live2d_bgm')[0].pause();
-						$('#musicButton').removeClass('play');
-						sessionStorage.setItem("live2dBGM_IsPlay", '1');
-					} else {
-						$('#live2d_bgm')[0].play();
-						$('#musicButton').addClass('play');
-						sessionStorage.setItem("live2dBGM_IsPlay", '0');
-					}
-				});
-				window.onbeforeunload = function () {
-					sessionStorage.setItem("live2dBGM_WindowClose", '0');
-					if ($('#musicButton').hasClass('play')) {
-						sessionStorage.setItem("live2dBGM_IsPlay", '0');
-					}
-				}
-				document.getElementById('live2d_bgm').addEventListener("timeupdate", function () {
-					var live2dBgmPlayTimeNow = document.getElementById('live2d_bgm').currentTime;
-					sessionStorage.setItem("live2dBGM_PlayTime", live2dBgmPlayTimeNow);
-				});
-				document.getElementById('live2d_bgm').addEventListener("ended", function () {
-					var listNow = parseInt($('#live2d_bgm').attr('data-bgm'));
-					listNow++;
-					if (listNow > $('input[name=live2dBGM]').length - 1) {
-						listNow = 0;
-					}
-					var listNewSrc = $('input[name=live2dBGM]').eq(listNow).val();
-					sessionStorage.setItem("live2dBGM_Num", listNow);
-					$('#live2d_bgm').attr('src', listNewSrc);
-					$('#live2d_bgm')[0].play();
-					$('#live2d_bgm').attr('data-bgm', listNow);
-				});
-				document.getElementById('live2d_bgm').addEventListener("error", function () {
-					$('#live2d_bgm')[0].pause();
-					$('#musicButton').removeClass('play');
-					showMessage('音乐似乎加载不出来了呢！', 0);
-				});
-			}
-			//获取用户名
-			var live2dUser = sessionStorage.getItem("live2duser");
-			if (live2dUser !== null) {
-				$('#AIuserName').val(live2dUser);
-			}
-			//获取位置
-			var landL = sessionStorage.getItem("historywidth");
-			var landB = sessionStorage.getItem("historyheight");
-			if (landL == null || landB == null) {
-				landL = '5px'
-				landB = '0px'
-			}
-			$('#landlord').css('left', landL + 'px');
-			$('#landlord').css('bottom', landB + 'px');
-			//移动
-			function getEvent() {
-				return window.event || arguments.callee.caller.arguments[0];
-			}
-			var smcc = document.getElementById("landlord");
-			var moveX = 0;
-			var moveY = 0;
-			var moveBottom = 0;
-			var moveLeft = 0;
-			var moveable = false;
-			var docMouseMoveEvent = document.onmousemove;
-			var docMouseUpEvent = document.onmouseup;
-			smcc.onmousedown = function () {
-				var ent = getEvent();
-				moveable = true;
-				moveX = ent.clientX;
-				moveY = ent.clientY;
-				var obj = smcc;
-				moveBottom = parseInt(obj.style.bottom);
-				moveLeft = parseInt(obj.style.left);
-				if (isFirefox = navigator.userAgent.indexOf("Firefox") > 0) {
-					window.getSelection().removeAllRanges();
-				}
-				document.onmousemove = function () {
-					if (moveable) {
-						var ent = getEvent();
-						var x = moveLeft + ent.clientX - moveX;
-						var y = moveBottom + (moveY - ent.clientY);
-						obj.style.left = x + "px";
-						obj.style.bottom = y + "px";
-					}
-				};
-				document.onmouseup = function () {
-					if (moveable) {
-						var historywidth = obj.style.left;
-						var historyheight = obj.style.bottom;
-						historywidth = historywidth.replace('px', '');
-						historyheight = historyheight.replace('px', '');
-						sessionStorage.setItem("historywidth", historywidth);
-						sessionStorage.setItem("historyheight", historyheight);
-						document.onmousemove = docMouseMoveEvent;
-						document.onmouseup = docMouseUpEvent;
-						moveable = false;
-						moveX = 0;
-						moveY = 0;
-						moveBottom = 0;
-						moveLeft = 0;
-					}
-				};
-			};
-		}
-		$(document).ready(function () {
-			var AIimgSrc = [];
-			let chooseLive2d = 'histoire'
-			if (chooseLive2d === 'histoire') {
-				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_00.png");
-				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_01.png");
-				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_02.png");
-				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_03.png");
-			} else if (chooseLive2d === 'rem') {
-				AIimgSrc.push(message_Path + "model/rem/remu2048/texture_00.png");
-			} else if (chooseLive2d === 'aoba') {
-				AIimgSrc.push(message_Path + "model/aoba/textures/texture_00.png");
-			} else if (chooseLive2d === 'hijiki') {
-				AIimgSrc.push(message_Path + "model/hijiki/moc/hijiki.2048/texture_00.png");
-			} else if (chooseLive2d === 'tororo') {
-				AIimgSrc.push(message_Path + "model/tororo/moc/tororo.2048/texture_00.png");
-			}
-			var images = [];
-			var imgLength = AIimgSrc.length;
-			var loadingNum = 0;
-			for (var i = 0; i < imgLength; i++) {
-				images[i] = new Image();
-				images[i].src = AIimgSrc[i];
-				images[i].onload = function () {
-					loadingNum++;
-					if (loadingNum === imgLength) {
-						var live2dhidden = localStorage.getItem("live2dhidden");
-						if (live2dhidden === "0") {
-							setTimeout(function () {
-								$('#open_live2d').fadeIn(200);
-							}, 1300);
-						} else {
-							setTimeout(function () {
-								$('#landlord').fadeIn(200);
-							}, 1300);
-						}
-						let model = '';
-						if (chooseLive2d === 'histoire') {
-							model = message_Path + "model/histoire/model.json";
-						} else if (chooseLive2d === 'rem') {
-							model = message_Path + "model/rem/model.json";
-						} else if (chooseLive2d === 'aoba') {
-							model = message_Path + "model/aoba/model.json";
-						} else if (chooseLive2d === 'hijiki') {
-							model = message_Path + "model/hijiki/hijiki.model.json";
-						} else if (chooseLive2d === 'tororo') {
-							model = message_Path + "model/tororo/tororo.model.json";
-						}
-						setTimeout(function () {
-							loadlive2d("live2d", model);
-						}, 1000);
-						initLive2d();
-						images = null;
-					}
-				}
-			}
-		});
-	}
-</script>
   
   
 </div>
@@ -1145,7 +589,7 @@
     <div class="result" id="result">
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://yunqian-qwq.github.io/post/ti-jie-p1928-wai-xing-mi-ma/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/ti-jie-p1928-wai-xing-mi-ma/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://www.luogu.com.cn/problem/P1928&#34;&gt;题目链接&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;解题思路&#34;&gt;解题思路&lt;/h2&gt;
@@ -1212,7 +656,7 @@ int main(){
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://yunqian-qwq.github.io/post/ti-jie-sp10500-haybale-haybale-stacking/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/ti-jie-sp10500-haybale-haybale-stacking/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://www.luogu.com.cn/problem/SP10500&#34;&gt;题目链接&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;此题大概就是维护一个序列，支持两个操作：&lt;/p&gt;
 &lt;ol&gt;
@@ -1325,7 +769,7 @@ int main(){
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://yunqian-qwq.github.io/post/ti-jie-cf1102e-monotonic-renumeration/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/ti-jie-cf1102e-monotonic-renumeration/"" data-c="
           &lt;p&gt;这题还是需要思考一会的。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;1.&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;1.&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;初步思路&lt;/p&gt;
@@ -1356,7 +800,7 @@ int main(){
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://yunqian-qwq.github.io/post/ti-jie-cf478b-random-teams/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/ti-jie-cf478b-random-teams/"" data-c="
           &lt;p&gt;本题考数学，难度不高。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;首先，如果一个组中有&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;x&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;人，那么这个组中朋友的组数就是&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msubsup&gt;&lt;mtext&gt;C&lt;/mtext&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msubsup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\text{C}^2_x=\dfrac{x(x-1)}{2}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.134338em;vertical-align:-0.247em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord text&#34;&gt;&lt;span class=&#34;mord&#34;&gt;C&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.887338em;&#34;&gt;&lt;span style=&#34;top:-2.4530000000000003em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;x&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.1362300000000003em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.247em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:2.113em;vertical-align:-0.686em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mopen nulldelimiter&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mfrac&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:1.427em;&#34;&gt;&lt;span style=&#34;top:-2.314em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.23em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;frac-line&#34; style=&#34;border-bottom-width:0.04em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.677em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.686em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose nulldelimiter&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;。&lt;/p&gt;
@@ -1446,7 +890,7 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://yunqian-qwq.github.io/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://yunqian-qwq.github.io/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/&#34;&gt;并不会有更好的阅读体验（&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 &lt;p&gt;之前貌似有过一篇日报，写过 Stylish 这个插件。&lt;a href=&#34;https://www.luogu.com.cn/blog/fsy2017/material-luogu-material&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
@@ -1593,7 +1037,7 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://yunqian-qwq.github.io/post/huan-ying/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/huan-ying/"" data-c="
           &lt;p&gt;QwQ！&lt;/p&gt;
 &lt;p class=&#39;katex-block&#39;&gt;&lt;span class=&#34;katex-display&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mstyle mathcolor=&#34;skyblue&#34;&gt;&lt;mrow&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;欢&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;迎&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;光&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;临&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;！&lt;/mi&gt;&lt;/mrow&gt;&lt;/mstyle&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\color{skyblue}\mathsf{欢迎光临！}
 &lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34; style=&#34;color:skyblue;&#34;&gt;&lt;span class=&#34;mord cjk_fallback&#34; style=&#34;color:skyblue;&#34;&gt;欢&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34; style=&#34;color:skyblue;&#34;&gt;迎&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34; style=&#34;color:skyblue;&#34;&gt;光&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34; style=&#34;color:skyblue;&#34;&gt;临&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34; style=&#34;color:skyblue;&#34;&gt;！&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
@@ -1601,7 +1045,7 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://yunqian-qwq.github.io/post/about/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/about/"" data-c="
           &lt;blockquote&gt;
 &lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1907,6 +1351,8 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
 <script src="/media/js/cool.js"></script>
 
 
+
+<script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/sakura.js"></script>
 
 
 </html>

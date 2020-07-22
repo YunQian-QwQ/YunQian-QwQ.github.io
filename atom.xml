@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://yunqian-qwq.github.io</id>
+    <id>http://localhost:4000</id>
     <title>云浅的小窝</title>
-    <updated>2020-07-22T12:51:23.692Z</updated>
+    <updated>2020-07-22T13:58:49.696Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://yunqian-qwq.github.io"/>
-    <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
+    <link rel="alternate" href="http://localhost:4000"/>
+    <link rel="self" href="http://localhost:4000/atom.xml"/>
     <subtitle>欢迎来到这个即将结束而又忙碌，可是却毫无救赎的世界。</subtitle>
-    <logo>https://yunqian-qwq.github.io/images/avatar.png</logo>
-    <icon>https://yunqian-qwq.github.io/favicon.ico</icon>
+    <logo>http://localhost:4000/images/avatar.png</logo>
+    <icon>http://localhost:4000/favicon.ico</icon>
     <rights>All rights reserved 2020, 云浅的小窝</rights>
     <entry>
         <title type="html"><![CDATA[题解 P1928 【外星密码】]]></title>
-        <id>https://yunqian-qwq.github.io/post/ti-jie-p1928-wai-xing-mi-ma/</id>
-        <link href="https://yunqian-qwq.github.io/post/ti-jie-p1928-wai-xing-mi-ma/">
+        <id>http://localhost:4000/post/ti-jie-p1928-wai-xing-mi-ma/</id>
+        <link href="http://localhost:4000/post/ti-jie-p1928-wai-xing-mi-ma/">
         </link>
         <updated>2020-07-22T04:20:04.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P1928">题目链接</a></p>
@@ -82,8 +82,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[题解 SP10500 【HAYBALE - Haybale stacking】]]></title>
-        <id>https://yunqian-qwq.github.io/post/ti-jie-sp10500-haybale-haybale-stacking/</id>
-        <link href="https://yunqian-qwq.github.io/post/ti-jie-sp10500-haybale-haybale-stacking/">
+        <id>http://localhost:4000/post/ti-jie-sp10500-haybale-haybale-stacking/</id>
+        <link href="http://localhost:4000/post/ti-jie-sp10500-haybale-haybale-stacking/">
         </link>
         <updated>2020-07-22T04:07:43.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/SP10500">题目链接</a></p>
@@ -198,8 +198,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[题解 CF1102E 【Monotonic Renumeration】]]></title>
-        <id>https://yunqian-qwq.github.io/post/ti-jie-cf1102e-monotonic-renumeration/</id>
-        <link href="https://yunqian-qwq.github.io/post/ti-jie-cf1102e-monotonic-renumeration/">
+        <id>http://localhost:4000/post/ti-jie-cf1102e-monotonic-renumeration/</id>
+        <link href="http://localhost:4000/post/ti-jie-cf1102e-monotonic-renumeration/">
         </link>
         <updated>2020-07-22T04:03:19.000Z</updated>
         <content type="html"><![CDATA[<p>这题还是需要思考一会的。</p>
@@ -232,8 +232,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[题解 CF478B 【Random Teams】]]></title>
-        <id>https://yunqian-qwq.github.io/post/ti-jie-cf478b-random-teams/</id>
-        <link href="https://yunqian-qwq.github.io/post/ti-jie-cf478b-random-teams/">
+        <id>http://localhost:4000/post/ti-jie-cf478b-random-teams/</id>
+        <link href="http://localhost:4000/post/ti-jie-cf478b-random-teams/">
         </link>
         <updated>2020-07-22T03:58:02.000Z</updated>
         <content type="html"><![CDATA[<p>本题考数学，难度不高。</p>
@@ -325,8 +325,8 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
     </entry>
     <entry>
         <title type="html"><![CDATA[Stylish/Stylus-我的浏览器我做主]]></title>
-        <id>https://yunqian-qwq.github.io/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/</id>
-        <link href="https://yunqian-qwq.github.io/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/">
+        <id>http://localhost:4000/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/</id>
+        <link href="http://localhost:4000/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/">
         </link>
         <updated>2020-07-22T03:37:58.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://yunqian-qwq.github.io/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/">并不会有更好的阅读体验（</a></p>
@@ -475,8 +475,8 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
     </entry>
     <entry>
         <title type="html"><![CDATA[小窝搭好啦！]]></title>
-        <id>https://yunqian-qwq.github.io/post/huan-ying/</id>
-        <link href="https://yunqian-qwq.github.io/post/huan-ying/">
+        <id>http://localhost:4000/post/huan-ying/</id>
+        <link href="http://localhost:4000/post/huan-ying/">
         </link>
         <updated>2020-07-21T15:12:02.000Z</updated>
         <content type="html"><![CDATA[<p>QwQ！</p>
