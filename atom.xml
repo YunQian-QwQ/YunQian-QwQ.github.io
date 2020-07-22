@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2020-07-22T14:54:22.787Z</updated>
+    <updated>2020-07-22T15:00:36.881Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yunqian-qwq.github.io"/>
     <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
@@ -794,36 +794,37 @@ bool cmp(double r,double s){
     return r&gt;s;
 }//用于在sort函数中进行降序排列
 int main(){
-	ios::sync_with_stdio(false);
-	cin.tie(0);
-	cout.tie(0);//高科技，可以给cin,cout加速
-	cin&gt;&gt;n&gt;&gt;l&gt;&gt;v;
-	y=l/v;//计算 Sisyphus 原本上山需要的时间
-	for(i=1;i&lt;=n;i++){
-		cin&gt;&gt;a[i];//输入魔法强度
-		a[i]/=v;//把魔法强度转化为这个魔法能让 Sisyphus 白白浪费的时间
-	}
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);//高科技，可以给cin,cout加速
+    cin&gt;&gt;n&gt;&gt;l&gt;&gt;v;
+    y=l/v;//计算 Sisyphus 原本上山需要的时间
+    for(i=1;i&lt;=n;i++){
+        cin&gt;&gt;a[i];//输入魔法强度
+        a[i]/=v;//把魔法强度转化为这个魔法能让 Sisyphus 白白浪费的时间
+    }
     sort(a+1,a+n+1,cmp);//降序排列
     for(i=1;i&lt;=n;i++){
         s[i]=s[i-1]+a[i];//计算前缀和
     }
-	cin&gt;&gt;q;
-	while(q--){
-		cin&gt;&gt;t;//对于每一次询问
-		if(y&gt;=t){//如果 Sisyphus 原本上山需要的时间就比宙斯想让他上山用的时间多
-			cout&lt;&lt;0&lt;&lt;endl;//直接输出0
-		}
-		else if(s[n]+y&lt;=t){//如果 Sisyphus 不可能用那么多时间上山
-			cout&lt;&lt;-1&lt;&lt;endl;//输出-1
-		}
-		else{
-			ans=upper_bound(s+1,s+n+1,t-y)-s;//在前缀和数组中二分查找最小的大于等于t-y（即 Sisyphus 需要多爬的时间）的数，记得减去数组头指针s
-			cout&lt;&lt;ans&lt;&lt;endl;//输出查找的结果
-			//可以简化为cout&lt;&lt;upper_bound(s+1,s+n+1,t-y)-s&lt;&lt;endl;
-		}
-	}
-	return 0;//完结撒花～
+    cin&gt;&gt;q;
+    while(q--){
+        cin&gt;&gt;t;//对于每一次询问
+        if(y&gt;=t){//如果 Sisyphus 原本上山需要的时间就比宙斯想让他上山用的时间多
+            cout&lt;&lt;0&lt;&lt;endl;//直接输出0
+        }
+        else if(s[n]+y&lt;=t){//如果 Sisyphus 不可能用那么多时间上山
+            cout&lt;&lt;-1&lt;&lt;endl;//输出-1
+        }
+        else{
+            ans=upper_bound(s+1,s+n+1,t-y)-s;//在前缀和数组中二分查找最小的大于等于t-y（即 Sisyphus 需要多爬的时间）的数，记得减去数组头指针s
+            cout&lt;&lt;ans&lt;&lt;endl;//输出查找的结果
+            //可以简化为cout&lt;&lt;upper_bound(s+1,s+n+1,t-y)-s&lt;&lt;endl;
+        }
+    }
+    return 0;//完结撒花～
 }
+
 </code></pre>
 ]]></content>
     </entry>
@@ -873,25 +874,25 @@ string yunqian(){
     char ch;//输入的字符
     string s=&quot;&quot;,str=&quot;&quot;;//s是最终答案，str是被压缩的字串，别忘了初始化
     /*注意：ch,s,str应该定义在函数内部，才能在每次递归中初始化，否则会导致一堆RE，可能还有几个MLE，总之没法AC，我就因为这个错了好几回*/
-	while(cin&gt;&gt;ch){//不断输入字符
-		if(ch=='['){//如果找到了被压缩的字串
-			cin&gt;&gt;k;//输入压缩次数
-			str=yunqian();//递归调用
-			while(k--){
-				s+=str;//把解压后的字串复制k次后添加到原来的字符串上
-			}
-		}
-		else if(ch==']'){//如果找到了压缩的字串的末尾
-			return s;//结束这一层递归并返回已经被解压的字串
-		}
-		else{//如果没有被压缩
-			s+=ch;//直接在最后添上这个字符。
-		}
-	}
+    while(cin&gt;&gt;ch){//不断输入字符
+        if(ch=='['){//如果找到了被压缩的字串
+            cin&gt;&gt;k;//输入压缩次数
+            str=yunqian();//递归调用
+            while(k--){
+                s+=str;//把解压后的字串复制k次后添加到原来的字符串上
+            }
+        }
+        else if(ch==']'){//如果找到了压缩的字串的末尾
+            return s;//结束这一层递归并返回已经被解压的字串
+        }
+        else{//如果没有被压缩
+            s+=ch;//直接在最后添上这个字符。
+        }
+    }
 }
 int main(){
-	cout&lt;&lt;yunqian();
-	return 0;//完结撒花～
+    cout&lt;&lt;yunqian();
+    return 0;//完结撒花～
 }
 </code></pre>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>The end.</mtext></mrow><annotation encoding="application/x-tex">\text{The\ end.}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">The end.</span></span></span></span></span></p>

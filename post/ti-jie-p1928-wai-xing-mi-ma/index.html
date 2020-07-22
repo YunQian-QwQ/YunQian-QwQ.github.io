@@ -9,7 +9,7 @@
 <meta name="description" content="欢迎来到这个即将结束而又忙碌，可是却毫无救赎的世界。">
 <meta name="theme-color" content="#000">
 <title>题解 P1928 【外星密码】 | 云浅的小窝</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1595429659423">
+<link rel="shortcut icon" href="/favicon.ico?v=1595430033672">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -87,6 +87,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -97,6 +99,8 @@
             </li>
           
             
+            
+              
             
             <li class="nav-item ">
               
@@ -109,6 +113,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -120,6 +126,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -129,6 +137,16 @@
               
             </li>
           
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_blank">
+                  
+                    <i class="fa fa-address-book"></i> 友链
+                  
+                </a>
+              </li>
+            
           
           
             <li id="fa_search" class="nav-item">
@@ -241,25 +259,6 @@
             </a>
           
         
-        
-      </div>
-    </div>
-  
-
-  
-    <div class="sidebar-item right-motion sidebar-item-friends">
-      
-        <p class="friends-title"><i class="fa fa-ship"></i> 友链</p>
-      
-      <div class="friends-box">
-        
-          <p>
-            <a href="https://www.luogu.com.cn/blog/wwwluogucn/">My Luogu Blog</a>
-          </p>
-        
-          <p>
-            <a href="https://www.luogu.com.cn/blog/5y2d1n/">dalao 翼德天尊</a>
-          </p>
         
       </div>
     </div>
@@ -638,25 +637,25 @@ string yunqian(){
     char ch;//输入的字符
     string s=&quot;&quot;,str=&quot;&quot;;//s是最终答案，str是被压缩的字串，别忘了初始化
     /*注意：ch,s,str应该定义在函数内部，才能在每次递归中初始化，否则会导致一堆RE，可能还有几个MLE，总之没法AC，我就因为这个错了好几回*/
-	while(cin&gt;&gt;ch){//不断输入字符
-		if(ch=='['){//如果找到了被压缩的字串
-			cin&gt;&gt;k;//输入压缩次数
-			str=yunqian();//递归调用
-			while(k--){
-				s+=str;//把解压后的字串复制k次后添加到原来的字符串上
-			}
-		}
-		else if(ch==']'){//如果找到了压缩的字串的末尾
-			return s;//结束这一层递归并返回已经被解压的字串
-		}
-		else{//如果没有被压缩
-			s+=ch;//直接在最后添上这个字符。
-		}
-	}
+    while(cin&gt;&gt;ch){//不断输入字符
+        if(ch=='['){//如果找到了被压缩的字串
+            cin&gt;&gt;k;//输入压缩次数
+            str=yunqian();//递归调用
+            while(k--){
+                s+=str;//把解压后的字串复制k次后添加到原来的字符串上
+            }
+        }
+        else if(ch==']'){//如果找到了压缩的字串的末尾
+            return s;//结束这一层递归并返回已经被解压的字串
+        }
+        else{//如果没有被压缩
+            s+=ch;//直接在最后添上这个字符。
+        }
+    }
 }
 int main(){
-	cout&lt;&lt;yunqian();
-	return 0;//完结撒花～
+    cout&lt;&lt;yunqian();
+    return 0;//完结撒花～
 }
 </code></pre>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>The end.</mtext></mrow><annotation encoding="application/x-tex">\text{The\ end.}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">The end.</span></span></span></span></span></p>
@@ -1931,36 +1930,37 @@ bool cmp(double r,double s){
     return r&amp;gt;s;
 }//用于在sort函数中进行降序排列
 int main(){
-	ios::sync_with_stdio(false);
-	cin.tie(0);
-	cout.tie(0);//高科技，可以给cin,cout加速
-	cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;l&amp;gt;&amp;gt;v;
-	y=l/v;//计算 Sisyphus 原本上山需要的时间
-	for(i=1;i&amp;lt;=n;i++){
-		cin&amp;gt;&amp;gt;a[i];//输入魔法强度
-		a[i]/=v;//把魔法强度转化为这个魔法能让 Sisyphus 白白浪费的时间
-	}
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);//高科技，可以给cin,cout加速
+    cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;l&amp;gt;&amp;gt;v;
+    y=l/v;//计算 Sisyphus 原本上山需要的时间
+    for(i=1;i&amp;lt;=n;i++){
+        cin&amp;gt;&amp;gt;a[i];//输入魔法强度
+        a[i]/=v;//把魔法强度转化为这个魔法能让 Sisyphus 白白浪费的时间
+    }
     sort(a+1,a+n+1,cmp);//降序排列
     for(i=1;i&amp;lt;=n;i++){
         s[i]=s[i-1]+a[i];//计算前缀和
     }
-	cin&amp;gt;&amp;gt;q;
-	while(q--){
-		cin&amp;gt;&amp;gt;t;//对于每一次询问
-		if(y&amp;gt;=t){//如果 Sisyphus 原本上山需要的时间就比宙斯想让他上山用的时间多
-			cout&amp;lt;&amp;lt;0&amp;lt;&amp;lt;endl;//直接输出0
-		}
-		else if(s[n]+y&amp;lt;=t){//如果 Sisyphus 不可能用那么多时间上山
-			cout&amp;lt;&amp;lt;-1&amp;lt;&amp;lt;endl;//输出-1
-		}
-		else{
-			ans=upper_bound(s+1,s+n+1,t-y)-s;//在前缀和数组中二分查找最小的大于等于t-y（即 Sisyphus 需要多爬的时间）的数，记得减去数组头指针s
-			cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl;//输出查找的结果
-			//可以简化为cout&amp;lt;&amp;lt;upper_bound(s+1,s+n+1,t-y)-s&amp;lt;&amp;lt;endl;
-		}
-	}
-	return 0;//完结撒花～
+    cin&amp;gt;&amp;gt;q;
+    while(q--){
+        cin&amp;gt;&amp;gt;t;//对于每一次询问
+        if(y&amp;gt;=t){//如果 Sisyphus 原本上山需要的时间就比宙斯想让他上山用的时间多
+            cout&amp;lt;&amp;lt;0&amp;lt;&amp;lt;endl;//直接输出0
+        }
+        else if(s[n]+y&amp;lt;=t){//如果 Sisyphus 不可能用那么多时间上山
+            cout&amp;lt;&amp;lt;-1&amp;lt;&amp;lt;endl;//输出-1
+        }
+        else{
+            ans=upper_bound(s+1,s+n+1,t-y)-s;//在前缀和数组中二分查找最小的大于等于t-y（即 Sisyphus 需要多爬的时间）的数，记得减去数组头指针s
+            cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl;//输出查找的结果
+            //可以简化为cout&amp;lt;&amp;lt;upper_bound(s+1,s+n+1,t-y)-s&amp;lt;&amp;lt;endl;
+        }
+    }
+    return 0;//完结撒花～
 }
+
 &lt;/code&gt;&lt;/pre&gt;
 ">题解 P6473 【[NOI Online #2 入门组]未了】</a>
       </div>
@@ -2007,25 +2007,25 @@ string yunqian(){
     char ch;//输入的字符
     string s=&amp;quot;&amp;quot;,str=&amp;quot;&amp;quot;;//s是最终答案，str是被压缩的字串，别忘了初始化
     /*注意：ch,s,str应该定义在函数内部，才能在每次递归中初始化，否则会导致一堆RE，可能还有几个MLE，总之没法AC，我就因为这个错了好几回*/
-	while(cin&amp;gt;&amp;gt;ch){//不断输入字符
-		if(ch==&#39;[&#39;){//如果找到了被压缩的字串
-			cin&amp;gt;&amp;gt;k;//输入压缩次数
-			str=yunqian();//递归调用
-			while(k--){
-				s+=str;//把解压后的字串复制k次后添加到原来的字符串上
-			}
-		}
-		else if(ch==&#39;]&#39;){//如果找到了压缩的字串的末尾
-			return s;//结束这一层递归并返回已经被解压的字串
-		}
-		else{//如果没有被压缩
-			s+=ch;//直接在最后添上这个字符。
-		}
-	}
+    while(cin&amp;gt;&amp;gt;ch){//不断输入字符
+        if(ch==&#39;[&#39;){//如果找到了被压缩的字串
+            cin&amp;gt;&amp;gt;k;//输入压缩次数
+            str=yunqian();//递归调用
+            while(k--){
+                s+=str;//把解压后的字串复制k次后添加到原来的字符串上
+            }
+        }
+        else if(ch==&#39;]&#39;){//如果找到了压缩的字串的末尾
+            return s;//结束这一层递归并返回已经被解压的字串
+        }
+        else{//如果没有被压缩
+            s+=ch;//直接在最后添上这个字符。
+        }
+    }
 }
 int main(){
-	cout&amp;lt;&amp;lt;yunqian();
-	return 0;//完结撒花～
+    cout&amp;lt;&amp;lt;yunqian();
+    return 0;//完结撒花～
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mtext&gt;The end.&lt;/mtext&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\text{The\ end.}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord text&#34;&gt;&lt;span class=&#34;mord&#34;&gt;The end.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
