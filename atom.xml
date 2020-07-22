@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2020-07-22T14:43:20.685Z</updated>
+    <updated>2020-07-22T14:51:50.293Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yunqian-qwq.github.io"/>
     <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
@@ -765,6 +765,65 @@ int main(){
 }
 </code></pre>
 <p><a href="https://www.luogu.com.cn/record/34401015">顺利AC！</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[题解 P6473 【[NOI Online #2 入门组]未了（民间数据）】]]></title>
+        <id>https://yunqian-qwq.github.io/post/ti-jie-p6473-noi-online-2-ru-men-zu-wei-liao-min-jian-shu-ju/</id>
+        <link href="https://yunqian-qwq.github.io/post/ti-jie-p6473-noi-online-2-ru-men-zu-wei-liao-min-jian-shu-ju/">
+        </link>
+        <updated>2020-04-25T14:50:00.000Z</updated>
+        <content type="html"><![CDATA[<p>此题作为NOI Online#2的第一题算是很良心了。</p>
+<hr>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.</mn></mrow><annotation encoding="application/x-tex">1.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span></span></span></span>关于<code>魔法</code></p>
+<p>由于第 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 个魔法 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 会让 Sisyphus 在爬山爬到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 这个位置的时候从头重新爬，所以它的作用就是让 Sisyphus 白白爬 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 长的山。</p>
+<p>又因为 Sisyphus 每年可以爬 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span> 的长度，所以这个魔法的作用本质上是让 Sisyphus 白白浪费 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><msub><mi>a</mi><mi>i</mi></msub><mi>v</mi></mfrac></mrow><annotation encoding="application/x-tex">\dfrac{a_i}{v}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.7935599999999998em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1075599999999999em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> 的时间。</p>
+<p>所以，我们可以在读入的时候就将 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 除以 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span>。</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2.</mn></mrow><annotation encoding="application/x-tex">2.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span></span></span></span>（本题考查点）最少需要施展的魔法数量</p>
+<p>一个很自然的想法是：将代表魔法能力的数组（此时已经除以 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span></span></span></span> 了）降序排列，从第一个开始一直往后加，直到这个和大于要求的时间，再输出加了多少个数。</p>
+<p>但是，这么做会导致最后三个点完美 TLE 。</p>
+<p><s>TLE 了怎么办？前缀和+二分帮您完美解决！</s></p>
+<p>我们可以将这个数组降序排列后计算每一项的前缀和，再利用<code>C++ STL</code>中自带<code>upper_bound</code>来二分查找最小的满足要求的数。</p>
+<p><s>激动人心的时刻到了！</s> 最后，上代码！</p>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+double l,v,a[200005],s[200005],t,y;//l,v如题意；数组a是魔法强度；数组s是数组a降序排列后的前缀和
+int n,i,ans;//n如题意
+bool cmp(double r,double s){
+    return r&gt;s;
+}//用于在sort函数中进行降序排列
+int main(){
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+	cout.tie(0);//高科技，可以给cin,cout加速
+	cin&gt;&gt;n&gt;&gt;l&gt;&gt;v;
+	y=l/v;//计算 Sisyphus 原本上山需要的时间
+	for(i=1;i&lt;=n;i++){
+		cin&gt;&gt;a[i];//输入魔法强度
+		a[i]/=v;//把魔法强度转化为这个魔法能让 Sisyphus 白白浪费的时间
+	}
+    sort(a+1,a+n+1,cmp);//降序排列
+    for(i=1;i&lt;=n;i++){
+        s[i]=s[i-1]+a[i];//计算前缀和
+    }
+	cin&gt;&gt;q;
+	while(q--){
+		cin&gt;&gt;t;//对于每一次询问
+		if(y&gt;=t){//如果 Sisyphus 原本上山需要的时间就比宙斯想让他上山用的时间多
+			cout&lt;&lt;0&lt;&lt;endl;//直接输出0
+		}
+		else if(s[n]+y&lt;=t){//如果 Sisyphus 不可能用那么多时间上山
+			cout&lt;&lt;-1&lt;&lt;endl;//输出-1
+		}
+		else{
+			ans=upper_bound(s+1,s+n+1,t-y)-s;//在前缀和数组中二分查找最小的大于等于t-y（即 Sisyphus 需要多爬的时间）的数，记得减去数组头指针s
+			cout&lt;&lt;ans&lt;&lt;endl;//输出查找的结果
+			//可以简化为cout&lt;&lt;upper_bound(s+1,s+n+1,t-y)-s&lt;&lt;endl;
+		}
+	}
+	return 0;//完结撒花～
+}
+</code></pre>
 ]]></content>
     </entry>
     <entry>
