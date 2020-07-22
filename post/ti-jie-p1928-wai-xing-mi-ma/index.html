@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>题解 | 云浅的小窝</title>
+<title>题解 P1928 【外星密码】 | 云浅的小窝</title>
 <meta name="description" content="欢迎来到这个即将结束而又忙碌，可是却毫无救赎的世界。">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -23,6 +23,7 @@
 
   </head>
   <body>
+  
     <nav class="navbar border fixed split-nav">
   <div class="nav-brand">
     <h3><a href="https://yunqian-qwq.github.io">云浅的小窝</a></h3>
@@ -79,100 +80,105 @@
     <div id="top" class="row site">
       <div class="sm-12 md-8 col">
         <div class="paper">
-          <h2 class="current-tag">标签: 题解</h2>
-          
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://yunqian-qwq.github.io/post/ti-jie-sp10500-haybale-haybale-stacking/">题解 SP10500 【HAYBALE - Haybale stacking】</a>
-    </h2>
-    <p class="article-meta">
-      2020-07-22
-      
-        <a href="https://yunqian-qwq.github.io/tag/AAdrWCyro/" class="badge secondary">
-          题解
-        </a>
-      
-        <a href="https://yunqian-qwq.github.io/tag/7hsOW6CVy/" class="badge warning">
-          差分
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://yunqian-qwq.github.io/post/ti-jie-sp10500-haybale-haybale-stacking/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
+          <article class="article">
+            <h1>题解 P1928 【外星密码】</h1>
+            <p class="article-meta">
+              2020-07-22
+              
+                <a href="https://yunqian-qwq.github.io/tag/0jv2sAbKl/" class="badge secondary">
+                  递推，递归
+                </a>
+              
+                <a href="https://yunqian-qwq.github.io/tag/G7fI6Xv4m/" class="badge secondary">
+                  洛谷题解
+                </a>
+              
+            </p>
+            
+            <div class="post-content">
+              <p><a href="https://www.luogu.com.cn/problem/P1928">题目链接</a></p>
+<hr>
+<h2 id="解题思路">解题思路</h2>
+<p>输入的这个字符串是被多重「压缩」的，所以一重一重地「解压缩」可能会非常非常麻烦（不过应该是可行的），导致代码极其难以理解。</p>
+<p>所以，我们使用<strong>递归算法</strong>，在读入这个字符串之后，找出被压缩的内容，再对被压缩的那个字符串实行「解压缩」操作。</p>
+<p>举个例子：<code>AC[3FUN]</code></p>
+<p>首先，我们找到了被压缩的字符串：<code>3FUN</code></p>
+<p>对<code>3FUN</code>进行解压，得到<code>FUNFUNFUN</code></p>
+<p>再把原来的字符串<code>AC</code>后面添上<code>FUNFUNFUN</code>即可。</p>
+<p>由于这个只有一重「压缩」，可能递归思想体现的不太明显，这里再举一个多重「压缩」的例子：</p>
+<p><code>SAD[2MLE[2TLE[2RE[2WA]]]</code></p>
+<p>首先找到被「压缩」的部分：</p>
+<p><code>[2MLE[2TLE[2RE[2WA]]]]</code></p>
+<p>（从此处开始剩下的部分就是递归的内容了，全部由程序自主实现）</p>
+<p>对这个部分进行解压，找到被「压缩」的部分：</p>
+<p><code>[2TLE[2RE[2WA]]]</code></p>
+<p>再对这个部分进行解压，找到被「压缩」的部分：</p>
+<p><code>[2RE[2WA]]</code></p>
+<p>再对这个部分进行解压，找到被「压缩」的部分：</p>
+<p><code>[2WA]</code></p>
+<p>（开始一层一层跳出递归）</p>
+<p>对这个部分进行解压并加到前一个字符串的末尾：</p>
+<p><code>[2REWAWA]</code></p>
+<p>再对这个部分进行解压并加到前一个字符串的末尾：</p>
+<p><code>[2TLEREWAWAREWAWA]</code></p>
+<p>再对这个部分进行解压并加到前一个字符串的末尾：</p>
+<p><code>[2MLETLEREWAWAREWAWATLEREWAWAREWAWA]</code></p>
+<p>再对这个部分进行解压并加到前一个字符串的末尾：</p>
+<p><code>SADMLETLEREWAWAREWAWATLEREWAWAREWAWAMLETLEREWAWAREWAWATLEREWAWAREWAWA</code></p>
+<p>至此，递归结束，「密码」破译完毕。</p>
+<p>所以，我们只需要找到被「压缩」的子串，并把这个字符串扔给「解压缩」程序即可。</p>
+<hr>
+<h2 id="代码实现">代码实现</h2>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;//万能头棒棒哒
+using namespace std;
+string yunqian(){
+    int k;//压缩的次数
+    char ch;//输入的字符
+    string s=&quot;&quot;,str=&quot;&quot;;//s是最终答案，str是被压缩的字串，别忘了初始化
+    /*注意：ch,s,str应该定义在函数内部，才能在每次递归中初始化，否则会导致一堆RE，可能还有几个MLE，总之没法AC，我就因为这个错了好几回*/
+	while(cin&gt;&gt;ch){//不断输入字符
+		if(ch=='['){//如果找到了被压缩的字串
+			cin&gt;&gt;k;//输入压缩次数
+			str=yunqian();//递归调用
+			while(k--){
+				s+=str;//把解压后的字串复制k次后添加到原来的字符串上
+			}
+		}
+		else if(ch==']'){//如果找到了压缩的字串的末尾
+			return s;//结束这一层递归并返回已经被解压的字串
+		}
+		else{//如果没有被压缩
+			s+=ch;//直接在最后添上这个字符。
+		}
+	}
+}
+int main(){
+	cout&lt;&lt;yunqian();
+	return 0;//完结撒花～
+}
+</code></pre>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>The end.</mtext></mrow><annotation encoding="application/x-tex">\text{The\ end.}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">The end.</span></span></span></span></span></p>
 
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://yunqian-qwq.github.io/post/ti-jie-cf1102e-monotonic-renumeration/">题解 CF1102E 【Monotonic Renumeration】</a>
-    </h2>
-    <p class="article-meta">
-      2020-07-22
-      
-        <a href="https://yunqian-qwq.github.io/tag/AAdrWCyro/" class="badge secondary">
-          题解
-        </a>
-      
-        <a href="https://yunqian-qwq.github.io/tag/NNu8Sv1OP/" class="badge secondary">
-          数论，数学
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://yunqian-qwq.github.io/post/ti-jie-cf1102e-monotonic-renumeration/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://yunqian-qwq.github.io/post/ti-jie-cf478b-random-teams/">题解 CF478B 【Random Teams】</a>
-    </h2>
-    <p class="article-meta">
-      2020-07-22
-      
-        <a href="https://yunqian-qwq.github.io/tag/AAdrWCyro/" class="badge secondary">
-          题解
-        </a>
-      
-        <a href="https://yunqian-qwq.github.io/tag/NNu8Sv1OP/" class="badge ">
-          数论，数学
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://yunqian-qwq.github.io/post/ti-jie-cf478b-random-teams/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-
+            </div>
+          </article>
         </div>
-        <div class="row flex-edges">
-  
-  
-</div>
-
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://yunqian-qwq.github.io/post/ti-jie-sp10500-haybale-haybale-stacking/">
+                <h3 class="post-title">
+                  题解 SP10500 【HAYBALE - Haybale stacking】
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
       </div>
+
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
     <img src="https://yunqian-qwq.github.io/images/avatar.png?v=1595391764572" class="no-responsive avatar">
@@ -253,7 +259,7 @@
           递推，递归
         </a>
       
-        <a href="https://yunqian-qwq.github.io/tag/G7fI6Xv4m/" class="badge secondary">
+        <a href="https://yunqian-qwq.github.io/tag/G7fI6Xv4m/" class="badge warning">
           洛谷题解
         </a>
       
@@ -265,11 +271,11 @@
           差分
         </a>
       
-        <a href="https://yunqian-qwq.github.io/tag/NNu8Sv1OP/" class="badge ">
+        <a href="https://yunqian-qwq.github.io/tag/NNu8Sv1OP/" class="badge secondary">
           数论，数学
         </a>
       
-        <a href="https://yunqian-qwq.github.io/tag/FtToQ57Ha/" class="badge ">
+        <a href="https://yunqian-qwq.github.io/tag/FtToQ57Ha/" class="badge secondary">
           洛谷日报
         </a>
       
@@ -279,6 +285,7 @@
     Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yunqian-qwq.github.io/atom.xml" target="_blank">RSS</a>
   </div>
 </div>
+
 
     </div>
 
