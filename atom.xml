@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2020-07-22T03:35:43.651Z</updated>
+    <updated>2020-07-22T03:36:51.707Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yunqian-qwq.github.io"/>
     <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
@@ -17,7 +17,6 @@
         </link>
         <updated>2020-07-21T15:12:02.000Z</updated>
         <content type="html"><![CDATA[<p>QwQ！</p>
-<p>洛谷博客上的内容我也会陆续搬运至此呢QwQ（有些题解可能不会）</p>
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="skyblue"><mrow><mi mathvariant="normal">欢</mi><mi mathvariant="normal">迎</mi><mi mathvariant="normal">光</mi><mi mathvariant="normal">临</mi><mi mathvariant="normal">！</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{skyblue}\mathsf{欢迎光临！}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord" style="color:skyblue;"><span class="mord cjk_fallback" style="color:skyblue;">欢</span><span class="mord cjk_fallback" style="color:skyblue;">迎</span><span class="mord cjk_fallback" style="color:skyblue;">光</span><span class="mord cjk_fallback" style="color:skyblue;">临</span><span class="mord cjk_fallback" style="color:skyblue;">！</span></span></span></span></span></span></p>
 ]]></content>
