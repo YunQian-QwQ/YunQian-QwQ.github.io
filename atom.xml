@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2020-07-22T13:59:55.591Z</updated>
+    <updated>2020-07-22T14:02:24.428Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yunqian-qwq.github.io"/>
     <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
@@ -10,6 +10,391 @@
     <logo>https://yunqian-qwq.github.io/images/avatar.png</logo>
     <icon>https://yunqian-qwq.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 云浅的小窝</rights>
+    <entry>
+        <title type="html"><![CDATA[题解 P4979 【矿洞：坍塌】]]></title>
+        <id>https://yunqian-qwq.github.io/post/ti-jie-p4979-kuang-dong-tan-ta/</id>
+        <link href="https://yunqian-qwq.github.io/post/ti-jie-p4979-kuang-dong-tan-ta/">
+        </link>
+        <updated>2020-07-22T14:02:02.000Z</updated>
+        <content type="html"><![CDATA[<p>一道罕见的没有卡掉珂朵莉树的良心题（</p>
+<hr>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/07/18/Ugh858.png" alt="世界一、幸せな女の子だ" loading="lazy"></figure>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="gray"><mstyle mathsize="0.7em"><mtext>世界一、幸せな女の子だ</mtext></mstyle></mstyle></mrow><annotation encoding="application/x-tex">\color{gray}\scriptsize\text{世界一、幸せな女の子だ}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.47833099999999995em;vertical-align:0em;"></span><span class="mord text sizing reset-size6 size3" style="color:gray;"><span class="mord cjk_fallback" style="color:gray;">世界一、幸せな女の子だ</span></span></span></span></span></span></p>
+<hr>
+<h3 id="前置知识珂朵莉树">前置知识：珂朵莉树</h3>
+<p>可能有些同学还是不太了解珂朵莉树，这里简单说两句。</p>
+<p>珂朵莉树，其实就是一种另类的暴力。</p>
+<p>只不过它把值相同的区间合并成一个结点，并保存在了 set 里面。</p>
+<p>存储方式：</p>
+<pre><code class="language-cpp">struct Node{
+    int l,r;
+    mutable int val;
+    //意思是区间 [l,r] 内的值全是 val。
+    //mutable的作用是让val能够被修改。
+    Node(int L,int R,int V):l(L),r(R),val(V){}
+    Node(int L):l(L){}
+    //构造函数，不多说
+    bool operator&lt;(const Node &amp;o)const{
+        return l&lt;o.l;
+    }
+    //重载小于号运算符，这个会在 split 操作中用到。
+};
+set&lt;Node&gt;s;
+</code></pre>
+<p>只要有区间赋值操作的数据结构，都可以用珂朵莉树来骗分。</p>
+<p>其实这个道理很容易想明白：本来珂朵莉树就是专门存储值相同的区间的，区间赋值一下，刚好成了一个值相同的区间，用珂朵莉树很好存储。</p>
+<p>比如一个序列：<code>1 2 3 3 3 4 5 5 6 6 7 8 9 9 9 9</code></p>
+<p>在珂朵莉树中，就会这么存储：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">val</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+<th style="text-align:center">8</th>
+<th style="text-align:center">9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">l</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">13</td>
+</tr>
+<tr>
+<td style="text-align:center">r</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">16</td>
+</tr>
+</tbody>
+</table>
+<p>现在要查询区间 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>3</mn><mo separator="true">,</mo><mn>10</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">[3,10]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mclose">]</span></span></span></span> 的和。</p>
+<p>我们发现，左端点 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span> 刚好是珂朵莉树第三个节点的左端点，右端点 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>10</mn></mrow><annotation encoding="application/x-tex">10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span></span></span></span> 也刚好是珂朵莉树第六个节点的右端点。</p>
+<p>因此，直接把第三个节点到第六个节点的信息统计一下，即：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>n</mi><mi>s</mi><mo>=</mo><mo>(</mo><mn>5</mn><mo>−</mo><mn>3</mn><mo>+</mo><mn>1</mn><mo>)</mo><mo>×</mo><mn>3</mn><mo>+</mo><mo>(</mo><mn>6</mn><mo>−</mo><mn>6</mn><mo>+</mo><mn>1</mn><mo>)</mo><mo>×</mo><mn>4</mn><mo>+</mo><mo>(</mo><mn>8</mn><mo>−</mo><mn>7</mn><mo>+</mo><mn>1</mn><mo>)</mo><mo>×</mo><mn>5</mn><mo>+</mo><mo>(</mo><mn>10</mn><mo>−</mo><mn>9</mn><mo>+</mo><mn>1</mn><mo>)</mo><mo>×</mo><mn>6</mn><mo>=</mo><mn>35</mn></mrow><annotation encoding="application/x-tex">ans=(5-3+1)\times3+(6-6+1)\times4+(8-7+1)\times5+(10-9+1)\times6=35
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">6</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">6</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">8</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">7</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">5</span></span></span></span></span></p>
+<p>那么，区间 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>3</mn><mo separator="true">,</mo><mn>10</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">[3,10]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mclose">]</span></span></span></span> 的和就是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>35</mn></mrow><annotation encoding="application/x-tex">35</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">5</span></span></span></span>。</p>
+<p>但是，如果这个区间不能被几个节点凑出来呢？</p>
+<p>比如 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>4</mn><mo separator="true">,</mo><mn>14</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">[4,14]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">4</span><span class="mclose">]</span></span></span></span>，没法被凑出来。</p>
+<p>这就涉及到珂朵莉树的核心操作：<strong><code>split</code></strong></p>
+<p>我们把区间 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>3</mn><mo separator="true">,</mo><mn>5</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">[3,5]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">5</span><span class="mclose">]</span></span></span></span> 和区间 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>13</mn><mo separator="true">,</mo><mn>16</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">[13,16]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">6</span><span class="mclose">]</span></span></span></span> 分裂一下，变成这样：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">val</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+<th style="text-align:center">8</th>
+<th style="text-align:center">9</th>
+<th style="text-align:center">9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">l</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">14</td>
+</tr>
+<tr>
+<td style="text-align:center">r</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">14</td>
+</tr>
+</tbody>
+</table>
+<p>这样，就变成了上一种情况。</p>
+<p><code>split</code> 代码如下：</p>
+<pre><code class="language-cpp">#define Sit set&lt;Node&gt;::iterator
+
+Sit split(int pos){
+    Sit it=s.lower_bound(Node(pos));
+    if(it!=s.end()&amp;&amp;it-&gt;l==pos){
+        return it;
+    }//如果无需分裂，直接返回
+    it--;
+    int L=it-&gt;l,R=it-&gt;r,V=it-&gt;val;
+    s.erase(it);//删除原节点
+    s.insert(Node(L,pos-1,V));
+    return s.insert(Node(pos,R,V)).first;
+    //分裂成两个子节点
+}
+</code></pre>
+<p>这段代码很短，应该不难<span class="katex"><span class="katex-mathml"><math><semantics><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>b</mi><mover accent="true"><mi>e</mi><mo>ˋ</mo></mover><mi>i</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mspace width="-0.8em"/><mi>s</mi><mover accent="true"><mi>o</mi><mo>ˋ</mo></mover><mi>n</mi><mi>g</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>打</mtext></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mspace width="-0.8em"/><mtext>出</mtext></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{matrix}b\grave{e}i&amp;\kern{-8pt}s\grave{o}ng\\\text{打}&amp;\kern{-8pt}\text{出}\end{matrix}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.4000000000000004em;vertical-align:-0.9500000000000004em;"></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">e</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">ˋ</span></span></span></span></span></span><span class="mord mathdefault">i</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">打</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mspace" style="margin-right:-0.8em;"></span><span class="mord mathdefault">s</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">o</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">ˋ</span></span></span></span></span></span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mspace" style="margin-right:-0.8em;"></span><span class="mord text"><span class="mord cjk_fallback">出</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span></span></span></span>。</p>
+<p>但是如果一直分裂下去，最终总会分裂成许多长度为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 的子结点，珂朵莉树会退化成暴力，该怎么办呢？</p>
+<p>不要忘了，我们还有区间赋值操作呢！</p>
+<p>将一个区间 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">[l,r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span> 赋值成 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span>，其实就相当于在珂朵莉树上插入一个子节点： <code>Node(l,r,x)</code>，然后删除原来的子结点即可。</p>
+<p>代码如下：</p>
+<pre><code class="language-cpp">inline void assign(int l,int r,int v){
+    Sit itr=split(r+1),itl=split(l);
+    s.erase(itl,itr);//删除原节点
+    s.insert(Node(l,r,v));//插入新节点
+}
+</code></pre>
+<p>这段代码更短，应该不难<span class="katex"><span class="katex-mathml"><math><semantics><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>b</mi><mover accent="true"><mi>e</mi><mo>ˋ</mo></mover><mi>i</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mspace width="-0.8em"/><mi>s</mi><mover accent="true"><mi>o</mi><mo>ˋ</mo></mover><mi>n</mi><mi>g</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>打</mtext></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mspace width="-0.8em"/><mtext>出</mtext></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{matrix}b\grave{e}i&amp;\kern{-8pt}s\grave{o}ng\\\text{打}&amp;\kern{-8pt}\text{出}\end{matrix}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.4000000000000004em;vertical-align:-0.9500000000000004em;"></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">e</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">ˋ</span></span></span></span></span></span><span class="mord mathdefault">i</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord cjk_fallback">打</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mspace" style="margin-right:-0.8em;"></span><span class="mord mathdefault">s</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">o</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">ˋ</span></span></span></span></span></span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mspace" style="margin-right:-0.8em;"></span><span class="mord text"><span class="mord cjk_fallback">出</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span></span></span></span>。</p>
+<p>这样，我们就保证了结点的数量，从而保证了珂朵莉树的复杂度。</p>
+<p>当然，这是在<strong>数据完全随机生成</strong>的情况下，不然凉心出题人搞得一个<code>assign</code>操作都没有，复杂度立刻爆炸。</p>
+<p>这也是珂朵莉树经常被卡的原因之一......<s>珂怜的珂朵莉</s></p>
+<hr>
+<h3 id="解题思路">解题思路：</h3>
+<ul>
+<li>对于操作 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，就是珂朵莉树基本操作：<code>assign</code>区间推平。</li>
+<li>对于操作 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span>：
+<ul>
+<li>先从 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span> 挨个枚举，一看到不同的就<code>return false;</code></li>
+<li>然后再判断第 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 个矿石和第 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">y+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 个矿石是否相同即可。</li>
+<li>记得特判 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 或者 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">y=n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> 的情况。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>最后，一起来做个英语完形填空吧：</p>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+#include&lt;cctype&gt;
+#include&lt;set&gt;
+#include&lt;vector&gt;
+#include&lt;algorithm&gt;
+
+using namespace std;
+
+int f(char _________){
+    return _________-'A';
+}
+
+struct ____{
+    int l,r;
+    mutable int ________________;
+    ____(int L,int R,int V):l(L),r(R),________________(V){}
+    ____(int L):l(L){}
+    bool operator&lt;(const ____ &amp;o)const{
+        return l&lt;o.l;
+    }
+};
+
+set&lt;____&gt;s;
+int _______________,_____________________;
+
+#define ______ set&lt;____&gt;::iterator
+
+______ ___(int pos){
+    ______ it=s.lower_bound(____(pos));
+    if(it!=s.end()&amp;&amp;it-&gt;l==pos){
+        return it;
+    }
+    it--;
+    int L=it-&gt;l,R=it-&gt;r,V=it-&gt;________________;
+    s.erase(it);
+    s.insert(____(L,pos-1,V));
+    return s.insert(____(pos,R,V)).first;
+}
+
+inline void __(int l,int r,int v){
+    ______ _____=___(r+1),__=___(l);
+    s.erase(__,_____);
+    s.insert(____(l,r,v));
+}
+
+bool _______(int l,int r){
+    ______ _____=___(r+1),__=___(l);
+    int k=__-&gt;________________;
+    for(______ it=__;it!=_____;it++){
+        if(it-&gt;________________!=k){
+            return false;
+        }
+    }
+    if(l==1||r==_______________)return true;
+    __--;
+    return __-&gt;________________!=_____-&gt;________________;
+}
+
+string str;
+
+int main(void){
+
+    ios::sync_with_stdio(false);
+    cin.tie(0);cout.tie(0);
+
+    cin&gt;&gt;_______________;
+    cin&gt;&gt;str;
+    int ________=str.size();
+
+    for(int i=0;i&lt;________;i++){
+        s.insert(____(i+1,i+1,f(str[i])));
+    }
+
+    cin&gt;&gt;_____________________;
+    while(_____________________--){
+        char _________;
+        int l,r;
+        char k;
+        cin&gt;&gt;_________;
+        if(_________=='A'){
+            cin&gt;&gt;l&gt;&gt;r&gt;&gt;k;
+            __(l,r,f(k));
+        }
+        else{
+            cin&gt;&gt;l&gt;&gt;r;
+            bool __________________________________________=_______(l,r);
+            if(__________________________________________)cout&lt;&lt;&quot;Yes\n&quot;;
+            else cout&lt;&lt;&quot;No\n&quot;;
+        }
+    }
+
+    return 0;
+}
+</code></pre>
+<p>对个答案？（附注释）</p>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+#include&lt;cctype&gt;
+#include&lt;set&gt;
+#include&lt;vector&gt;
+#include&lt;algorithm&gt;
+
+using namespace std;
+
+int f(char ch){
+    return ch-'A';
+}
+//由于是字符，怕出错，保险起见把字符全部换成了数字。
+
+struct Node{
+    int l,r;
+    mutable int val;
+    //意思是区间 [l,r] 内的值全是 val。
+    //mutable的作用是让val能够被修改。
+    Node(int L,int R,int V):l(L),r(R),val(V){}
+    Node(int L):l(L){}
+    //构造函数，不多说
+    bool operator&lt;(const Node &amp;o)const{
+        return l&lt;o.l;
+    }
+    //重载小于号运算符，这个会在 split 操作中用到。
+};
+
+set&lt;Node&gt;s;
+int n,m;
+
+#define Sit set&lt;Node&gt;::iterator
+
+Sit split(int pos){
+    Sit it=s.lower_bound(Node(pos));
+    if(it!=s.end()&amp;&amp;it-&gt;l==pos){
+        return it;
+    }//如果无需分裂，直接返回
+    it--;
+    int L=it-&gt;l,R=it-&gt;r,V=it-&gt;val;
+    s.erase(it);//删除原节点
+    s.insert(Node(L,pos-1,V));
+    return s.insert(Node(pos,R,V)).first;
+    //分裂成两个子节点
+}
+
+inline void assign(int l,int r,int v){
+    Sit itr=split(r+1),itl=split(l);
+    s.erase(itl,itr);//删除原节点
+    s.insert(Node(l,r,v));//插入新节点
+}
+
+bool check(int l,int r){
+    Sit itr=split(r+1),itl=split(l);
+    int k=itl-&gt;val;//取出左端点
+    for(Sit it=itl;it!=itr;it++){
+        if(it-&gt;val!=k){//一旦发现区间中有一个元素不相同
+            return false;//就不满足要求
+        }
+    }
+    //运行到这里还没有return，就说明这个区间内的元素确实都相同。
+    if(l==1||r==n)return true;
+    itl--;
+    return itl-&gt;val!=itr-&gt;val;
+}
+
+string str;
+
+int main(void){
+
+    ios::sync_with_stdio(false);
+    cin.tie(0);cout.tie(0);
+
+    cin&gt;&gt;n;
+    cin&gt;&gt;str;
+    int len=str.size();
+
+    for(int i=0;i&lt;len;i++){
+        s.insert(Node(i+1,i+1,f(str[i])));
+        //初始情况下，区间 [i+1,i+1] 内当然都是相同的元素。
+    }
+
+    cin&gt;&gt;m;
+    while(m--){
+        char ch;
+        int l,r;
+        char k;
+        cin&gt;&gt;ch;
+        if(ch=='A'){
+            cin&gt;&gt;l&gt;&gt;r&gt;&gt;k;
+            assign(l,r,f(k));
+        }
+        else{
+            cin&gt;&gt;l&gt;&gt;r;
+            bool p=check(l,r);
+            if(p)cout&lt;&lt;&quot;Yes\n&quot;;
+            else cout&lt;&lt;&quot;No\n&quot;;
+        }
+    }
+
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[题解 P1928 【外星密码】]]></title>
         <id>https://yunqian-qwq.github.io/post/ti-jie-p1928-wai-xing-mi-ma/</id>
