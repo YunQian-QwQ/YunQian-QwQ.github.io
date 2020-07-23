@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2020-07-23T01:25:30.239Z</updated>
+    <updated>2020-07-23T01:31:43.606Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yunqian-qwq.github.io"/>
     <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
@@ -547,11 +547,6 @@ int main(void){
 <p><s>恰烂钱 CCF 官网：貌似还没有（</s></p>
 <hr>
 <h1 id="faq">F.A.Q.</h1>
-<p>Q:为什么<a href="chrome://extensions">chrome://extensions</a>这个网址进去之后会显示啥也没有？</p>
-<p>A:那是因为我们现在是在洛谷博客这个主站上，实际上你访问的网址将会变成<code>https://www.luogu.com.cn/blog/wwwluogucn/chrome://extensions/</code>，自然不存在啦。</p>
-<p>当然，如果你是在窝的博客里看这篇文章，那估计是单纯的点不进去，解决方法一样的QwQ。</p>
-<p>可以复制这个网址，把网址栏清空后，在网址栏粘贴这个网址：<code>chrome://extensions</code>，就能进去了。</p>
-<p>当然，要确保你使用的是 Chrome 浏览器，别的浏览器上，当然啥也没有=_=</p>
 <p>Q:我还是不会翻墙，怎么办？</p>
 <p>A:欢迎私信作者，我会私信解决的QwQ。</p>
 <p>如果还有其他问题，欢迎在评论区提出！我会放到这里的。</p>
