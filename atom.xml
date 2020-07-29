@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2020-07-29T12:48:51.030Z</updated>
+    <updated>2020-07-29T12:49:28.976Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yunqian-qwq.github.io"/>
     <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
@@ -18,8 +18,7 @@
         <updated>2020-07-29T12:46:40.000Z</updated>
         <content type="html"><![CDATA[<h1 id="扯两句闲话">扯两句闲话</h1>
 <p><s>咕了这么长时间，其实是想看看有没有人能想出正解。</s></p>
-<p>很遗憾，目前为止，只有@<a href="https://www.luogu.com.cn/user/284123"><br>
-__VAN♂游戏__</a> 写出了正确的解法。</p>
+<p>很遗憾，目前为止，只有@<a href="https://www.luogu.com.cn/user/284123">__VAN♂游戏__</a> 写出了正确的解法。</p>
 <p>不过由于一些奇奇怪怪的错误，他写的正解只得了 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>20</mn></mrow><annotation encoding="application/x-tex">20</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">0</span></span></span></span> 分......后来只好去写只能拿 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>40</mn></mrow><annotation encoding="application/x-tex">40</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">0</span></span></span></span> 分的解法。</p>
 <p><s>我也没看出来哪错了。</s></p>
 <p>另外这题数据生成器其实也有一段故事，到最后给大家说。</p>
