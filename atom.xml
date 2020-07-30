@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2020-07-29T13:16:42.609Z</updated>
+    <updated>2020-07-30T02:45:38.663Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yunqian-qwq.github.io"/>
     <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
@@ -105,44 +105,44 @@ int n;
 int a[20001],b[20001];
 int t;
 int read(){
-	int k=0;
-	char i=getchar();
-	while(i&lt;'0'||i&gt;'9'){
-		i=getchar();
-	}
-	while(i&gt;='0'&amp;&amp;i&lt;='9'){
-		k*=10;
-		k+=i-'0';
-		i=getchar();
-	}
-	return k;
+    int k=0;
+    char i=getchar();
+    while(i&lt;'0'||i&gt;'9'){
+        i=getchar();
+    }
+    while(i&gt;='0'&amp;&amp;i&lt;='9'){
+        k*=10;
+        k+=i-'0';
+        i=getchar();
+    }
+    return k;
 }
 int main(){
-	q=read();
-	for(int i=1;i&lt;=q;i++){
-		n=read();
-		for(int j=1;j&lt;=n;j++){
-			a[j]=read();
-		}
-		for(int j=1;j&lt;=n;j++){
-			b[j]=read();
-		}
-		sort(a+1,a+n+1);
-		sort(b+1,b+n+1);
-		t=1;
-		for(int j=1;j&lt;=n;j++){
-			if(a[j]!=b[j]){
-				t=0;
-				break;
-			}
-		}
-		if(t==1){
-			cout&lt;&lt;&quot;YES\n&quot;;
-		}else{
-			cout&lt;&lt;&quot;NO\n&quot;;
-		}
-	}
-	return 0;
+    q=read();
+    for(int i=1;i&lt;=q;i++){
+        n=read();
+        for(int j=1;j&lt;=n;j++){
+            a[j]=read();
+        }
+        for(int j=1;j&lt;=n;j++){
+            b[j]=read();
+        }
+        sort(a+1,a+n+1);
+        sort(b+1,b+n+1);
+        t=1;
+        for(int j=1;j&lt;=n;j++){
+            if(a[j]!=b[j]){
+                t=0;
+                break;
+            }
+        }
+        if(t==1){
+            cout&lt;&lt;&quot;YES\n&quot;;
+        }else{
+            cout&lt;&lt;&quot;NO\n&quot;;
+        }
+    }
+    return 0;
 }
 </code></pre>
 <p>由于这个方法很好想，做法显然，就懒得写注释了（</p>
@@ -467,7 +467,7 @@ int main(){
                     //遇到一个数就取 max 和 min。
                 }
             }
-            cout&lt;&lt;maxn&lt;&lt;&quot; &quot;&lt;&lt;minn&lt;&lt;endl;
+            cout&lt;&lt;minn&lt;&lt;&quot; &quot;&lt;&lt;maxn&lt;&lt;endl;
         }
     }
 

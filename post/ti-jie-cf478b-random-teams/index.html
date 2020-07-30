@@ -9,7 +9,7 @@
 <meta name="description" content="欢迎来到这个即将结束而又忙碌，可是却毫无救赎的世界。">
 <meta name="theme-color" content="#000">
 <title>题解 CF478B 【Random Teams】 | 云浅的小窝</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1596028372338">
+<link rel="shortcut icon" href="/favicon.ico?v=1596077133726">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -1118,44 +1118,44 @@ int n;
 int a[20001],b[20001];
 int t;
 int read(){
-	int k=0;
-	char i=getchar();
-	while(i&amp;lt;&#39;0&#39;||i&amp;gt;&#39;9&#39;){
-		i=getchar();
-	}
-	while(i&amp;gt;=&#39;0&#39;&amp;amp;&amp;amp;i&amp;lt;=&#39;9&#39;){
-		k*=10;
-		k+=i-&#39;0&#39;;
-		i=getchar();
-	}
-	return k;
+    int k=0;
+    char i=getchar();
+    while(i&amp;lt;&#39;0&#39;||i&amp;gt;&#39;9&#39;){
+        i=getchar();
+    }
+    while(i&amp;gt;=&#39;0&#39;&amp;amp;&amp;amp;i&amp;lt;=&#39;9&#39;){
+        k*=10;
+        k+=i-&#39;0&#39;;
+        i=getchar();
+    }
+    return k;
 }
 int main(){
-	q=read();
-	for(int i=1;i&amp;lt;=q;i++){
-		n=read();
-		for(int j=1;j&amp;lt;=n;j++){
-			a[j]=read();
-		}
-		for(int j=1;j&amp;lt;=n;j++){
-			b[j]=read();
-		}
-		sort(a+1,a+n+1);
-		sort(b+1,b+n+1);
-		t=1;
-		for(int j=1;j&amp;lt;=n;j++){
-			if(a[j]!=b[j]){
-				t=0;
-				break;
-			}
-		}
-		if(t==1){
-			cout&amp;lt;&amp;lt;&amp;quot;YES\n&amp;quot;;
-		}else{
-			cout&amp;lt;&amp;lt;&amp;quot;NO\n&amp;quot;;
-		}
-	}
-	return 0;
+    q=read();
+    for(int i=1;i&amp;lt;=q;i++){
+        n=read();
+        for(int j=1;j&amp;lt;=n;j++){
+            a[j]=read();
+        }
+        for(int j=1;j&amp;lt;=n;j++){
+            b[j]=read();
+        }
+        sort(a+1,a+n+1);
+        sort(b+1,b+n+1);
+        t=1;
+        for(int j=1;j&amp;lt;=n;j++){
+            if(a[j]!=b[j]){
+                t=0;
+                break;
+            }
+        }
+        if(t==1){
+            cout&amp;lt;&amp;lt;&amp;quot;YES\n&amp;quot;;
+        }else{
+            cout&amp;lt;&amp;lt;&amp;quot;NO\n&amp;quot;;
+        }
+    }
+    return 0;
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;由于这个方法很好想，做法显然，就懒得写注释了（&lt;/p&gt;
@@ -1477,7 +1477,7 @@ int main(){
                     //遇到一个数就取 max 和 min。
                 }
             }
-            cout&amp;lt;&amp;lt;maxn&amp;lt;&amp;lt;&amp;quot; &amp;quot;&amp;lt;&amp;lt;minn&amp;lt;&amp;lt;endl;
+            cout&amp;lt;&amp;lt;minn&amp;lt;&amp;lt;&amp;quot; &amp;quot;&amp;lt;&amp;lt;maxn&amp;lt;&amp;lt;endl;
         }
     }
 
