@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://yunqian-qwq.github.io</id>
+    <id>http://localhost:4000</id>
     <title>云浅的小窝</title>
-    <updated>2020-08-29T17:39:32.863Z</updated>
+    <updated>2020-09-09T12:10:57.926Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://yunqian-qwq.github.io"/>
-    <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
+    <link rel="alternate" href="http://localhost:4000"/>
+    <link rel="self" href="http://localhost:4000/atom.xml"/>
     <subtitle>欢迎来到这个即将结束而又忙碌，可是却毫无救赎的世界。</subtitle>
-    <logo>https://yunqian-qwq.github.io/images/avatar.png</logo>
-    <icon>https://yunqian-qwq.github.io/favicon.ico</icon>
+    <logo>http://localhost:4000/images/avatar.png</logo>
+    <icon>http://localhost:4000/favicon.ico</icon>
     <rights>All rights reserved 2020, 云浅的小窝</rights>
     <entry>
         <title type="html"><![CDATA[【模拟赛题解】逻辑哲学论]]></title>
-        <id>https://yunqian-qwq.github.io/post/Solution-T5/</id>
-        <link href="https://yunqian-qwq.github.io/post/Solution-T5/">
+        <id>http://localhost:4000/post/Solution-T5/</id>
+        <link href="http://localhost:4000/post/Solution-T5/">
         </link>
         <updated>2020-07-29T12:46:40.000Z</updated>
         <content type="html"><![CDATA[<h1 id="扯两句闲话">扯两句闲话</h1>
@@ -221,8 +221,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[【模拟赛题解】在太阳西斜的这个世界里	]]></title>
-        <id>https://yunqian-qwq.github.io/post/Solution-T3/</id>
-        <link href="https://yunqian-qwq.github.io/post/Solution-T3/">
+        <id>http://localhost:4000/post/Solution-T3/</id>
+        <link href="http://localhost:4000/post/Solution-T3/">
         </link>
         <updated>2020-07-28T16:16:06.000Z</updated>
         <content type="html"><![CDATA[<p>珂朵莉是世界上最幸福的女孩，不接受反驳！</p>
@@ -478,8 +478,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[Markdown&LaTeX 测试]]></title>
-        <id>https://yunqian-qwq.github.io/post/markdownandlatex-ce-shi/</id>
-        <link href="https://yunqian-qwq.github.io/post/markdownandlatex-ce-shi/">
+        <id>http://localhost:4000/post/markdownandlatex-ce-shi/</id>
+        <link href="http://localhost:4000/post/markdownandlatex-ce-shi/">
         </link>
         <updated>2020-07-22T15:10:13.000Z</updated>
         <content type="html"><![CDATA[<p>先测 Markdown。</p>
@@ -897,8 +897,8 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
     </entry>
     <entry>
         <title type="html"><![CDATA[小窝搭好啦！]]></title>
-        <id>https://yunqian-qwq.github.io/post/huan-ying/</id>
-        <link href="https://yunqian-qwq.github.io/post/huan-ying/">
+        <id>http://localhost:4000/post/huan-ying/</id>
+        <link href="http://localhost:4000/post/huan-ying/">
         </link>
         <updated>2020-07-21T15:12:02.000Z</updated>
         <content type="html"><![CDATA[<p>QwQ！</p>
@@ -908,8 +908,8 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
     </entry>
     <entry>
         <title type="html"><![CDATA[题解 P4979 【矿洞：坍塌】]]></title>
-        <id>https://yunqian-qwq.github.io/post/ti-jie-p4979-kuang-dong-tan-ta/</id>
-        <link href="https://yunqian-qwq.github.io/post/ti-jie-p4979-kuang-dong-tan-ta/">
+        <id>http://localhost:4000/post/ti-jie-p4979-kuang-dong-tan-ta/</id>
+        <link href="http://localhost:4000/post/ti-jie-p4979-kuang-dong-tan-ta/">
         </link>
         <updated>2020-07-18T14:02:02.000Z</updated>
         <content type="html"><![CDATA[<p>一道罕见的没有卡掉珂朵莉树的良心题（</p>
@@ -1293,12 +1293,11 @@ int main(void){
     </entry>
     <entry>
         <title type="html"><![CDATA[Stylish/Stylus-我的浏览器我做主]]></title>
-        <id>https://yunqian-qwq.github.io/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/</id>
-        <link href="https://yunqian-qwq.github.io/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/">
+        <id>http://localhost:4000/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/</id>
+        <link href="http://localhost:4000/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/">
         </link>
         <updated>2020-07-05T03:37:58.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://yunqian-qwq.github.io/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/">并不会有更好的阅读体验（</a></p>
-<h1 id="前言">前言</h1>
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1>
 <p>之前貌似有过一篇日报，写过 Stylish 这个插件。<a href="https://www.luogu.com.cn/blog/fsy2017/material-luogu-material">Link</a></p>
 <p>不过当我兴高采烈地想要跟随那篇日报的指引，美化洛谷时，却看到了这样的画面：</p>
 <figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/07/05/MZGJQanDSvOuwd5.png" alt="截屏2020-07-05 上午11.24.25.png" loading="lazy"></figure>
@@ -1333,10 +1332,11 @@ int main(void){
 <li>Stylish/Stylus For Firefox 下载</li>
 </ul>
 <h2 id="stylusstylish-for-chrome">Stylus/Stylish For Chrome</h2>
-<p>首先，由于 Chrome 上下载 Stylus/Stylish 需要前往应用商店，是外网，所以需要翻墙（</p>
-<p>可以看<a href="https://zhuanlan.zhihu.com/p/138167691">这篇文章</a>，那位大佬讲的比较清楚。</p>
-<p><s>其实我本来也写了如何翻墙，不过在经过热心谷民的提醒之后，发现传播翻墙方法 zzmg，慌忙删掉了这部分（</s></p>
-<p>如果还是不会翻墙，欢迎私信作者，我会私信解答的QwQ。</p>
+<p>首先，由于 Chrome 上下载 Stylus/Stylish 需要前往应用商店，是外网，所以需要<code>珂·学·上·网</code>（</p>
+<p><strong>可以先看<a href="https://www.cnblogs.com/tangbohu2008/p/12395862.html">这篇文章</a>，这里有<code>珂·学·上·网</code>的方法。</strong></p>
+<p><s>其实我本来也写了如何<code>珂·学·上·网</code>，不过在经过热心谷民的提醒之后，发现传播<code>珂·学·上·网</code>方法 zzmg，慌忙删掉了这部分（</s></p>
+<p>如果还是不会<code>珂·学·上·网</code>，欢迎私信作者，我会私信解答的QwQ。</p>
+<p><s>但是一定要先看看上面的文章啊。。别看都不看就来找作者了。。</s></p>
 <hr>
 <p>能够翻墙之后，我们就可以放心大胆地访问 Chrome 网上应用店，下载 Stylus/Stylish 咯~</p>
 <p>下载方法：</p>
@@ -1432,15 +1432,21 @@ int main(void){
 <p><s>恰烂钱 CCF 官网：貌似还没有（</s></p>
 <hr>
 <h1 id="faq">F.A.Q.</h1>
-<p>Q:我还是不会翻墙，怎么办？</p>
+<p>Q:我确实不会<code>珂·学·上·网</code>，怎么办？</p>
 <p>A:欢迎私信作者，我会私信解决的QwQ。</p>
 <p>如果还有其他问题，欢迎在评论区提出！我会放到这里的。</p>
+<p>Q:<a href="https://userstyles.org">https://userstyles.org</a> 上不去了，怎么办？</p>
+<p>A:<s>只能说你 rp 过低</s></p>
+<p>初次进入这个网站，珂能会非常非常慢，请耐心等待，不要退出。<s>大概等个几十分钟就出来了。</s></p>
+<p><strong>另外，不建议清除此网站的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="sans-serif">C</mi><mi mathvariant="sans-serif">o</mi><mi mathvariant="sans-serif">o</mi><mi mathvariant="sans-serif">k</mi><mi mathvariant="sans-serif">i</mi><mi mathvariant="sans-serif">e</mi></mrow><annotation encoding="application/x-tex">\mathsf{Cookie}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord"><span class="mord mathsf">C</span><span class="mord mathsf">o</span><span class="mord mathsf">o</span><span class="mord mathsf">k</span><span class="mord mathsf">i</span><span class="mord mathsf">e</span></span></span></span></span> ，否则会导致下次进入更慢=_=</strong></p>
+<p>实在不行的话可以换 Freestyler，<a href="http://freestyler.ws/plugin-page">在这里下载</a>。上传到浏览器的方式和 Stylish/Stylus 差不多。</p>
+<p>然后在这里：<a href="http://freestyler.ws/">http://freestyler.ws/</a> 里面弄样式，但是这里没有洛谷的样式，而且都是一些比较老的样式了......=_=</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[2020年下学期 期末自闭记]]></title>
-        <id>https://yunqian-qwq.github.io/post/2020-nian-xia-xue-qi-qi-mo-zi-bi-ji/</id>
-        <link href="https://yunqian-qwq.github.io/post/2020-nian-xia-xue-qi-qi-mo-zi-bi-ji/">
+        <id>http://localhost:4000/post/2020-nian-xia-xue-qi-qi-mo-zi-bi-ji/</id>
+        <link href="http://localhost:4000/post/2020-nian-xia-xue-qi-qi-mo-zi-bi-ji/">
         </link>
         <updated>2020-07-04T14:16:59.000Z</updated>
         <content type="html"><![CDATA[<h2 id="说在前面">说在前面</h2>
@@ -1534,8 +1540,8 @@ D.长臂猿</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[题解 SP10500 【HAYBALE - Haybale stacking】]]></title>
-        <id>https://yunqian-qwq.github.io/post/ti-jie-sp10500-haybale-haybale-stacking/</id>
-        <link href="https://yunqian-qwq.github.io/post/ti-jie-sp10500-haybale-haybale-stacking/">
+        <id>http://localhost:4000/post/ti-jie-sp10500-haybale-haybale-stacking/</id>
+        <link href="http://localhost:4000/post/ti-jie-sp10500-haybale-haybale-stacking/">
         </link>
         <updated>2020-06-14T04:07:43.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/SP10500">题目链接</a></p>
@@ -1650,8 +1656,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[题解 P6473 【[NOI Online #2 入门组]未了】]]></title>
-        <id>https://yunqian-qwq.github.io/post/ti-jie-p6473-noi-online-2-ru-men-zu-wei-liao-min-jian-shu-ju/</id>
-        <link href="https://yunqian-qwq.github.io/post/ti-jie-p6473-noi-online-2-ru-men-zu-wei-liao-min-jian-shu-ju/">
+        <id>http://localhost:4000/post/ti-jie-p6473-noi-online-2-ru-men-zu-wei-liao-min-jian-shu-ju/</id>
+        <link href="http://localhost:4000/post/ti-jie-p6473-noi-online-2-ru-men-zu-wei-liao-min-jian-shu-ju/">
         </link>
         <updated>2020-04-25T14:50:00.000Z</updated>
         <content type="html"><![CDATA[<p>此题作为NOI Online#2的第一题算是很良心了。</p>
@@ -1711,8 +1717,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[题解 P1928 【外星密码】]]></title>
-        <id>https://yunqian-qwq.github.io/post/ti-jie-p1928-wai-xing-mi-ma/</id>
-        <link href="https://yunqian-qwq.github.io/post/ti-jie-p1928-wai-xing-mi-ma/">
+        <id>http://localhost:4000/post/ti-jie-p1928-wai-xing-mi-ma/</id>
+        <link href="http://localhost:4000/post/ti-jie-p1928-wai-xing-mi-ma/">
         </link>
         <updated>2020-04-17T05:45:23.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P1928">题目链接</a></p>
