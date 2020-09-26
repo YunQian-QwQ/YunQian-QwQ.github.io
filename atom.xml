@@ -1,19 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2020-09-09T12:10:57.926Z</updated>
+    <updated>2020-09-26T07:50:56.996Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://yunqian-qwq.github.io"/>
+    <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
     <subtitle>欢迎来到这个即将结束而又忙碌，可是却毫无救赎的世界。</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>https://yunqian-qwq.github.io/images/avatar.png</logo>
+    <icon>https://yunqian-qwq.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 云浅的小窝</rights>
     <entry>
+        <title type="html"><![CDATA[题解 CF149D 【Coloring Brackets】]]></title>
+        <id>https://yunqian-qwq.github.io/post/ti-jie-cf149d-coloring-brackets/</id>
+        <link href="https://yunqian-qwq.github.io/post/ti-jie-cf149d-coloring-brackets/">
+        </link>
+        <updated>2020-09-26T07:50:39.000Z</updated>
+        <content type="html"><![CDATA[<p>一道区间 dp 的好题。</p>
+<p><a href="">更好的阅读体验？</a></p>
+<hr>
+<h2 id="括号配对">括号配对</h2>
+<p>这个，不用多说了吧。</p>
+<p>令 <code>right[i]</code> 为第 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 个括号的配对括号。</p>
+<p>代码很好写：</p>
+<pre><code class="language-cpp">scanf(&quot;%s&quot;,s+1);
+int n=strlen(s+1);
+for(int i=1;i&lt;=n;i++){
+    if(s[i]=='(')stk.push(i);
+    else{
+        right[stk.top()]=i;
+        right[i]=stk.top();
+        stk.pop();
+    }
+}
+</code></pre>
+<p>具体原理很简答，可以看 <a href="https://www.luogu.com.cn/problem/UVA673">UVA673 平衡的括号 Parentheses Balance</a>。</p>
+<hr>
+<h2 id="设计状态">设计状态</h2>
+<p>看到题后第一反应当然是令 <code>dp[l][r]</code> 为将区间 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">[l,r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span> 内染色的总方案数。</p>
+<p>但是题目上说：</p>
+<blockquote>
+<ol>
+<li>一个括号可以染红色、蓝色或不染色</li>
+<li>一对匹配的括号需要且只能将其中一个染色</li>
+<li>相邻两个括号颜色不能相同（但可以都不染色）</li>
+</ol>
+</blockquote>
+<p>有了这些限制之后，我们发现，如果单纯地定义 <code>dp[l][r]</code> 为将区间 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">[l,r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span> 内染色的总方案数，很难转移。</p>
+<p>换句话说，我们还需要更多的信息来进行转移。</p>
+<p>其实只需要增加这个区间两端的括号颜色，就可以进行转移了。</p>
+<p>那么就设计 <code>dp[l][r][p][q]</code> 为将区间 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">[l,r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span> 内染色的总方案数，且最左边的括号颜色为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span></span></span></span>，最右边的括号颜色为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span></span></span></span>。</p>
+<p>其中 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo separator="true">,</mo><mi>q</mi></mrow><annotation encoding="application/x-tex">p,q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span></span></span></span> 的值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 时代表不染色，为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 时代表蓝色，为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 时代表红色。</p>
+<hr>
+<h2 id="转移方程">转移方程</h2>
+<p>首先是初始条件：如果 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mo>=</mo><mi>l</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">r=l+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>，那么 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">[l,r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span> 一定是一对匹配的括号。</p>
+<p>所以有 <code>dp[l][r][0][1]=dp[l][r][0][2]=dp[l][r][1][0]=dp[l][r][2][0]=1;</code>。</p>
+<p>毕竟整个区间长度就是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span>，那么一旦左、右端点的颜色确定了，整个区间的染色方案自然也就确定了，所以只有一种。</p>
+<p>由于「一对匹配的括号需要且只能将其中一个染色」，所以 <code>dp[l][r][0][0]=dp[l][r][1][2]=dp[l][r][2][1]=dp[l][r][1][1]=dp[l][r][2][2]=0</code>，不必再专门这五种专门赋值了。</p>
+<p>然后，转移的时候，需要分类讨论：</p>
+<ul>
+<li>如果第 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi></mrow><annotation encoding="application/x-tex">l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span></span></span></span> 个括号刚好和第 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span></span></span></span> 个括号配对：</li>
+</ul>
+<p>那么这个区间类似于这样：<code>(......)</code>。</p>
+<p>所以易知 <code>dp[l][r][0][0]=dp[l][r][1][2]=dp[l][r][2][1]=dp[l][r][1][1]=dp[l][r][2][2]=0</code>。原因和上面一样。</p>
+<p>所以这五个就不需要再转移了。</p>
+<p>至于剩下的四种情况，以 <code>dp[l][r][0][1]</code> 为例：</p>
+<p>由于左端点不染色，右端点是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span><br>
+所以它不能 <code>dp[l+1][r-1][·][1]</code> 转移过来。<br>
+否则相邻两个括号的颜色相同，就不符合条件了。</p>
+<p>那么我们从 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 枚举 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i,j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span></span></span></span>，然后看 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo separator="true">,</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i,j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span></span></span></span> 的值来一个一个转移即可。</p>
+<pre><code class="language-cpp">for(int i=0;i&lt;=2;i++){
+    for(int j=0;j&lt;=2;j++){
+        if(j!=1)dp[l][r][0][1]+=dp[l+1][r-1][i][j],dp[l][r][0][1]%=mod;
+        if(j!=2)dp[l][r][0][2]+=dp[l+1][r-1][i][j],dp[l][r][0][2]%=mod;
+        if(i!=1)dp[l][r][1][0]+=dp[l+1][r-1][i][j],dp[l][r][1][0]%=mod;
+        if(i!=2)dp[l][r][2][0]+=dp[l+1][r-1][i][j],dp[l][r][2][0]%=mod;
+    }
+}
+</code></pre>
+<ul>
+<li>如果第 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi></mrow><annotation encoding="application/x-tex">l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span></span></span></span> 个括号刚好和第 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span></span></span></span> 个括号不配对：</li>
+</ul>
+<p>那么我们找出与第 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi></mrow><annotation encoding="application/x-tex">l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span></span></span></span> 个括号配对的括号。</p>
+<p>区间大概是这样的：<code>(......)...(</code></p>
+<p>那么我们分别处理出区间 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mi>l</mi><mo separator="true">,</mo><mtext mathvariant="monospace">right[l]</mtext><mo>]</mo></mrow><annotation encoding="application/x-tex">[l,\texttt{right[l]}]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord text"><span class="mord texttt">right[l]</span></span><span class="mclose">]</span></span></span></span> 的方案数和区间 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mtext mathvariant="monospace">right[l]</mtext><mo>+</mo><mn>1</mn><mo separator="true">,</mo><mi>r</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">[\texttt{right[l]}+1,r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord text"><span class="mord texttt">right[l]</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span> 的方案数，然后相乘即可。</p>
+<p>需要注意的是，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext mathvariant="monospace">right[l]</mtext></mrow><annotation encoding="application/x-tex">\texttt{right[l]}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9166599999999999em;vertical-align:-0.22222em;"></span><span class="mord text"><span class="mord texttt">right[l]</span></span></span></span></span> 与 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext mathvariant="monospace">right[l]</mtext><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\texttt{right[l]}+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9166599999999999em;vertical-align:-0.22222em;"></span><span class="mord text"><span class="mord texttt">right[l]</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 处的括号颜色不能相同。这种情况需要特判。</p>
+<pre><code class="language-cpp">for(int i=0;i&lt;=2;i++){
+    for(int j=0;j&lt;=2;j++){
+        for(int p=0;p&lt;=2;p++){
+            for(int q=0;q&lt;=2;q++){
+                if((j==1&amp;&amp;p==1)||(j==2&amp;&amp;p==2))continue;//right[l] 与 right[l]+1 处的括号颜色相同
+                dp[l][r][i][q]+=(dp[l][right[l]][i][j]*dp[right[l]+1][r][p][q]%mod);
+                dp[l][r][i][q]%=mod;
+            }
+        }
+    }
+}
+</code></pre>
+<p>那么，转移方式就弄好啦！</p>
+<p>有一个需要注意的点就是：转移顺序最好是以记忆化搜索的顺序来，不然的话会很麻烦。</p>
+<hr>
+<p>最后，上代码：</p>
+<pre><code class="language-cpp">#include&lt;cstdio&gt;
+#include&lt;cstdlib&gt;
+#include&lt;cstring&gt;
+#include&lt;cstdlib&gt;
+#include&lt;stack&gt;
+
+#define MAXN 800
+#define int long long
+
+using namespace std;
+
+char s[MAXN];
+int dp[MAXN][MAXN][5][5],right[MAXN];
+stack&lt;int&gt;stk;
+
+const int mod=1000000007;
+
+void DFS(int l,int r){
+    if(r==l+1){
+        dp[l][r][0][1]=dp[l][r][0][2]=dp[l][r][1][0]=dp[l][r][2][0]=1;
+    }
+    else if(right[l]==r){//l,r 配对
+        DFS(l+1,r-1);//先处理出来 [l+1,r-1] 的方案数
+        for(int i=0;i&lt;=2;i++){
+            for(int j=0;j&lt;=2;j++){
+                if(j!=1)dp[l][r][0][1]+=dp[l+1][r-1][i][j],dp[l][r][0][1]%=mod;
+                if(j!=2)dp[l][r][0][2]+=dp[l+1][r-1][i][j],dp[l][r][0][2]%=mod;
+                if(i!=1)dp[l][r][1][0]+=dp[l+1][r-1][i][j],dp[l][r][1][0]%=mod;
+                if(i!=2)dp[l][r][2][0]+=dp[l+1][r-1][i][j],dp[l][r][2][0]%=mod;
+            }
+        }
+        //刚才说过的转移方程
+    }
+    else{
+        DFS(l,right[l]);
+        DFS(right[l]+1,r);
+        //先处理区间 [l,right[l]] 和区间 [right[l]+1,r]。
+        for(int i=0;i&lt;=2;i++){
+            for(int j=0;j&lt;=2;j++){
+                for(int p=0;p&lt;=2;p++){
+                    for(int q=0;q&lt;=2;q++){
+                        if((j==1&amp;&amp;p==1)||(j==2&amp;&amp;p==2))continue;
+                        dp[l][r][i][q]+=(dp[l][right[l]][i][j]*dp[right[l]+1][r][p][q]%mod);
+                        dp[l][r][i][q]%=mod;
+                    }
+                }
+            }
+        }
+    }
+}
+
+signed main(void){
+
+    scanf(&quot;%s&quot;,s+1);
+    int n=strlen(s+1);
+    for(int i=1;i&lt;=n;i++){
+        if(s[i]=='(')stk.push(i);
+        else{
+            right[stk.top()]=i;
+            right[i]=stk.top();
+            stk.pop();
+        }
+    }
+    //处理出配对的括号
+
+    DFS(1,n);
+
+    int ans=0;
+    for(int i=0;i&lt;=2;i++){
+        for(int j=0;j&lt;=2;j++){
+            ans+=dp[1][n][i][j];
+            ans%=mod;
+        }
+    }
+
+    printf(&quot;%lld\n&quot;,ans);
+
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[【模拟赛题解】逻辑哲学论]]></title>
-        <id>http://localhost:4000/post/Solution-T5/</id>
-        <link href="http://localhost:4000/post/Solution-T5/">
+        <id>https://yunqian-qwq.github.io/post/Solution-T5/</id>
+        <link href="https://yunqian-qwq.github.io/post/Solution-T5/">
         </link>
         <updated>2020-07-29T12:46:40.000Z</updated>
         <content type="html"><![CDATA[<h1 id="扯两句闲话">扯两句闲话</h1>
@@ -221,8 +394,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[【模拟赛题解】在太阳西斜的这个世界里	]]></title>
-        <id>http://localhost:4000/post/Solution-T3/</id>
-        <link href="http://localhost:4000/post/Solution-T3/">
+        <id>https://yunqian-qwq.github.io/post/Solution-T3/</id>
+        <link href="https://yunqian-qwq.github.io/post/Solution-T3/">
         </link>
         <updated>2020-07-28T16:16:06.000Z</updated>
         <content type="html"><![CDATA[<p>珂朵莉是世界上最幸福的女孩，不接受反驳！</p>
@@ -478,8 +651,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[Markdown&LaTeX 测试]]></title>
-        <id>http://localhost:4000/post/markdownandlatex-ce-shi/</id>
-        <link href="http://localhost:4000/post/markdownandlatex-ce-shi/">
+        <id>https://yunqian-qwq.github.io/post/markdownandlatex-ce-shi/</id>
+        <link href="https://yunqian-qwq.github.io/post/markdownandlatex-ce-shi/">
         </link>
         <updated>2020-07-22T15:10:13.000Z</updated>
         <content type="html"><![CDATA[<p>先测 Markdown。</p>
@@ -897,8 +1070,8 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
     </entry>
     <entry>
         <title type="html"><![CDATA[小窝搭好啦！]]></title>
-        <id>http://localhost:4000/post/huan-ying/</id>
-        <link href="http://localhost:4000/post/huan-ying/">
+        <id>https://yunqian-qwq.github.io/post/huan-ying/</id>
+        <link href="https://yunqian-qwq.github.io/post/huan-ying/">
         </link>
         <updated>2020-07-21T15:12:02.000Z</updated>
         <content type="html"><![CDATA[<p>QwQ！</p>
@@ -908,8 +1081,8 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
     </entry>
     <entry>
         <title type="html"><![CDATA[题解 P4979 【矿洞：坍塌】]]></title>
-        <id>http://localhost:4000/post/ti-jie-p4979-kuang-dong-tan-ta/</id>
-        <link href="http://localhost:4000/post/ti-jie-p4979-kuang-dong-tan-ta/">
+        <id>https://yunqian-qwq.github.io/post/ti-jie-p4979-kuang-dong-tan-ta/</id>
+        <link href="https://yunqian-qwq.github.io/post/ti-jie-p4979-kuang-dong-tan-ta/">
         </link>
         <updated>2020-07-18T14:02:02.000Z</updated>
         <content type="html"><![CDATA[<p>一道罕见的没有卡掉珂朵莉树的良心题（</p>
@@ -1293,8 +1466,8 @@ int main(void){
     </entry>
     <entry>
         <title type="html"><![CDATA[Stylish/Stylus-我的浏览器我做主]]></title>
-        <id>http://localhost:4000/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/</id>
-        <link href="http://localhost:4000/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/">
+        <id>https://yunqian-qwq.github.io/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/</id>
+        <link href="https://yunqian-qwq.github.io/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/">
         </link>
         <updated>2020-07-05T03:37:58.000Z</updated>
         <content type="html"><![CDATA[<h1 id="前言">前言</h1>
@@ -1445,8 +1618,8 @@ int main(void){
     </entry>
     <entry>
         <title type="html"><![CDATA[2020年下学期 期末自闭记]]></title>
-        <id>http://localhost:4000/post/2020-nian-xia-xue-qi-qi-mo-zi-bi-ji/</id>
-        <link href="http://localhost:4000/post/2020-nian-xia-xue-qi-qi-mo-zi-bi-ji/">
+        <id>https://yunqian-qwq.github.io/post/2020-nian-xia-xue-qi-qi-mo-zi-bi-ji/</id>
+        <link href="https://yunqian-qwq.github.io/post/2020-nian-xia-xue-qi-qi-mo-zi-bi-ji/">
         </link>
         <updated>2020-07-04T14:16:59.000Z</updated>
         <content type="html"><![CDATA[<h2 id="说在前面">说在前面</h2>
@@ -1540,8 +1713,8 @@ D.长臂猿</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[题解 SP10500 【HAYBALE - Haybale stacking】]]></title>
-        <id>http://localhost:4000/post/ti-jie-sp10500-haybale-haybale-stacking/</id>
-        <link href="http://localhost:4000/post/ti-jie-sp10500-haybale-haybale-stacking/">
+        <id>https://yunqian-qwq.github.io/post/ti-jie-sp10500-haybale-haybale-stacking/</id>
+        <link href="https://yunqian-qwq.github.io/post/ti-jie-sp10500-haybale-haybale-stacking/">
         </link>
         <updated>2020-06-14T04:07:43.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/SP10500">题目链接</a></p>
@@ -1656,8 +1829,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[题解 P6473 【[NOI Online #2 入门组]未了】]]></title>
-        <id>http://localhost:4000/post/ti-jie-p6473-noi-online-2-ru-men-zu-wei-liao-min-jian-shu-ju/</id>
-        <link href="http://localhost:4000/post/ti-jie-p6473-noi-online-2-ru-men-zu-wei-liao-min-jian-shu-ju/">
+        <id>https://yunqian-qwq.github.io/post/ti-jie-p6473-noi-online-2-ru-men-zu-wei-liao-min-jian-shu-ju/</id>
+        <link href="https://yunqian-qwq.github.io/post/ti-jie-p6473-noi-online-2-ru-men-zu-wei-liao-min-jian-shu-ju/">
         </link>
         <updated>2020-04-25T14:50:00.000Z</updated>
         <content type="html"><![CDATA[<p>此题作为NOI Online#2的第一题算是很良心了。</p>
@@ -1713,76 +1886,6 @@ int main(){
 }
 
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[题解 P1928 【外星密码】]]></title>
-        <id>http://localhost:4000/post/ti-jie-p1928-wai-xing-mi-ma/</id>
-        <link href="http://localhost:4000/post/ti-jie-p1928-wai-xing-mi-ma/">
-        </link>
-        <updated>2020-04-17T05:45:23.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/P1928">题目链接</a></p>
-<hr>
-<h2 id="解题思路">解题思路</h2>
-<p>输入的这个字符串是被多重「压缩」的，所以一重一重地「解压缩」可能会非常非常麻烦（不过应该是可行的），导致代码极其难以理解。</p>
-<p>所以，我们使用<strong>递归算法</strong>，在读入这个字符串之后，找出被压缩的内容，再对被压缩的那个字符串实行「解压缩」操作。</p>
-<p>举个例子：<code>AC[3FUN]</code></p>
-<p>首先，我们找到了被压缩的字符串：<code>3FUN</code></p>
-<p>对<code>3FUN</code>进行解压，得到<code>FUNFUNFUN</code></p>
-<p>再把原来的字符串<code>AC</code>后面添上<code>FUNFUNFUN</code>即可。</p>
-<p>由于这个只有一重「压缩」，可能递归思想体现的不太明显，这里再举一个多重「压缩」的例子：</p>
-<p><code>SAD[2MLE[2TLE[2RE[2WA]]]</code></p>
-<p>首先找到被「压缩」的部分：</p>
-<p><code>[2MLE[2TLE[2RE[2WA]]]]</code></p>
-<p>（从此处开始剩下的部分就是递归的内容了，全部由程序自主实现）</p>
-<p>对这个部分进行解压，找到被「压缩」的部分：</p>
-<p><code>[2TLE[2RE[2WA]]]</code></p>
-<p>再对这个部分进行解压，找到被「压缩」的部分：</p>
-<p><code>[2RE[2WA]]</code></p>
-<p>再对这个部分进行解压，找到被「压缩」的部分：</p>
-<p><code>[2WA]</code></p>
-<p>（开始一层一层跳出递归）</p>
-<p>对这个部分进行解压并加到前一个字符串的末尾：</p>
-<p><code>[2REWAWA]</code></p>
-<p>再对这个部分进行解压并加到前一个字符串的末尾：</p>
-<p><code>[2TLEREWAWAREWAWA]</code></p>
-<p>再对这个部分进行解压并加到前一个字符串的末尾：</p>
-<p><code>[2MLETLEREWAWAREWAWATLEREWAWAREWAWA]</code></p>
-<p>再对这个部分进行解压并加到前一个字符串的末尾：</p>
-<p><code>SADMLETLEREWAWAREWAWATLEREWAWAREWAWAMLETLEREWAWAREWAWATLEREWAWAREWAWA</code></p>
-<p>至此，递归结束，「密码」破译完毕。</p>
-<p>所以，我们只需要找到被「压缩」的子串，并把这个字符串扔给「解压缩」程序即可。</p>
-<hr>
-<h2 id="代码实现">代码实现</h2>
-<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;//万能头棒棒哒
-using namespace std;
-string yunqian(){
-    int k;//压缩的次数
-    char ch;//输入的字符
-    string s=&quot;&quot;,str=&quot;&quot;;//s是最终答案，str是被压缩的字串，别忘了初始化
-    /*注意：ch,s,str应该定义在函数内部，才能在每次递归中初始化，否则会导致一堆RE，可能还有几个MLE，总之没法AC，我就因为这个错了好几回*/
-    while(cin&gt;&gt;ch){//不断输入字符
-        if(ch=='['){//如果找到了被压缩的字串
-            cin&gt;&gt;k;//输入压缩次数
-            str=yunqian();//递归调用
-            while(k--){
-                s+=str;//把解压后的字串复制k次后添加到原来的字符串上
-            }
-        }
-        else if(ch==']'){//如果找到了压缩的字串的末尾
-            return s;//结束这一层递归并返回已经被解压的字串
-        }
-        else{//如果没有被压缩
-            s+=ch;//直接在最后添上这个字符。
-        }
-    }
-}
-int main(){
-    cout&lt;&lt;yunqian();
-    return 0;//完结撒花～
-}
-</code></pre>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>The end.</mtext></mrow><annotation encoding="application/x-tex">\text{The\ end.}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">The end.</span></span></span></span></span></p>
 ]]></content>
     </entry>
 </feed>
