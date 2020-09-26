@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2020-09-26T07:50:56.996Z</updated>
+    <updated>2020-09-26T07:55:48.727Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yunqian-qwq.github.io"/>
     <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
@@ -16,8 +16,18 @@
         <link href="https://yunqian-qwq.github.io/post/ti-jie-cf149d-coloring-brackets/">
         </link>
         <updated>2020-09-26T07:50:39.000Z</updated>
-        <content type="html"><![CDATA[<p>一道区间 dp 的好题。</p>
-<p><a href="">更好的阅读体验？</a></p>
+        <content type="html"><![CDATA[<h2 id="description">Description</h2>
+<p><a href="https://www.luogu.com.cn/problem/CF149D">题目链接</a></p>
+<blockquote>
+<p>给定一个配对的括号序列，求染色方案。染色规则如下：</p>
+<ol>
+<li>一个括号可以染红色、蓝色或不染色</li>
+<li>一对匹配的括号需要且只能将其中一个染色</li>
+<li>相邻两个括号颜色不能相同（但可以都不染色）</li>
+</ol>
+</blockquote>
+<hr>
+<p>一道区间 dp 的好题。</p>
 <hr>
 <h2 id="括号配对">括号配对</h2>
 <p>这个，不用多说了吧。</p>
