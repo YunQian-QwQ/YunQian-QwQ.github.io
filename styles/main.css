@@ -2194,7 +2194,7 @@ body {
     }code > span.copy-code {
       cursor: url('https://cdn.jsdelivr.net/gh/yunqian-qwq/yunqian-qwq.github.io@master/media/curs/default_texto.cur'), text !important;
     }.post img {
-      cursor: url('https://cdn.jsdelivr.net/gh/yunqian-qwq/yunqian-qwq.github.io@master/media/curs/default_vertical.cur'), zoom-in !important;
+      cursor: url('https://cdn.jsdelivr.net/gh/yunqian-qwq/yunqian-qwq.github.io@master/media/curs/default_zoomout.cur'), zoom-in !important;
     }.post img {
-      cursor: url('https://cdn.jsdelivr.net/gh/yunqian-qwq/yunqian-qwq.github.io@master/media/curs/default_zoomout.cur'), zoom-out !important;
+      cursor: url('https://cdn.jsdelivr.net/gh/yunqian-qwq/yunqian-qwq.github.io@master/media/curs/default_vertical.cur'), zoom-out !important;
     }
