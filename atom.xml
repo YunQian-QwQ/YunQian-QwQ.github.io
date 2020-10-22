@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2020-10-22T13:59:13.939Z</updated>
+    <updated>2020-10-22T14:02:34.382Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://yunqian-qwq.github.io"/>
+    <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
     <subtitle>欢迎来到这个即将结束而又忙碌，可是却毫无救赎的世界。</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>https://yunqian-qwq.github.io/images/avatar.png</logo>
+    <icon>https://yunqian-qwq.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 云浅的小窝</rights>
     <entry>
         <title type="html"><![CDATA[关于本博客]]></title>
-        <id>http://localhost:4000/post/guan-yu-ben-bo-ke/</id>
-        <link href="http://localhost:4000/post/guan-yu-ben-bo-ke/">
+        <id>https://yunqian-qwq.github.io/post/guan-yu-ben-bo-ke/</id>
+        <link href="https://yunqian-qwq.github.io/post/guan-yu-ben-bo-ke/">
         </link>
         <updated>2020-10-12T12:01:08.000Z</updated>
         <content type="html"><![CDATA[<p>由于本 Blog 在 7-25 才搭建完毕，所以文章并不全，只是搬运了部分文章。</p>
@@ -23,8 +23,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[题解 CF149D 【Coloring Brackets】]]></title>
-        <id>http://localhost:4000/post/ti-jie-cf149d-coloring-brackets/</id>
-        <link href="http://localhost:4000/post/ti-jie-cf149d-coloring-brackets/">
+        <id>https://yunqian-qwq.github.io/post/ti-jie-cf149d-coloring-brackets/</id>
+        <link href="https://yunqian-qwq.github.io/post/ti-jie-cf149d-coloring-brackets/">
         </link>
         <updated>2020-09-26T07:50:39.000Z</updated>
         <content type="html"><![CDATA[<h1 id="description">Description</h1>
@@ -207,8 +207,8 @@ signed main(void){
     </entry>
     <entry>
         <title type="html"><![CDATA[【模拟赛题解】逻辑哲学论]]></title>
-        <id>http://localhost:4000/post/Solution-T5/</id>
-        <link href="http://localhost:4000/post/Solution-T5/">
+        <id>https://yunqian-qwq.github.io/post/Solution-T5/</id>
+        <link href="https://yunqian-qwq.github.io/post/Solution-T5/">
         </link>
         <updated>2020-07-29T12:46:40.000Z</updated>
         <content type="html"><![CDATA[<h1 id="扯两句闲话">扯两句闲话</h1>
@@ -416,8 +416,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[【模拟赛题解】在太阳西斜的这个世界里	]]></title>
-        <id>http://localhost:4000/post/Solution-T3/</id>
-        <link href="http://localhost:4000/post/Solution-T3/">
+        <id>https://yunqian-qwq.github.io/post/Solution-T3/</id>
+        <link href="https://yunqian-qwq.github.io/post/Solution-T3/">
         </link>
         <updated>2020-07-28T16:16:06.000Z</updated>
         <content type="html"><![CDATA[<p>珂朵莉是世界上最幸福的女孩，不接受反驳！</p>
@@ -673,8 +673,8 @@ int main(){
     </entry>
     <entry>
         <title type="html"><![CDATA[Markdown&LaTeX 测试]]></title>
-        <id>http://localhost:4000/post/markdownandlatex-ce-shi/</id>
-        <link href="http://localhost:4000/post/markdownandlatex-ce-shi/">
+        <id>https://yunqian-qwq.github.io/post/markdownandlatex-ce-shi/</id>
+        <link href="https://yunqian-qwq.github.io/post/markdownandlatex-ce-shi/">
         </link>
         <updated>2020-07-22T15:10:13.000Z</updated>
         <content type="html"><![CDATA[<p>先测 Markdown。</p>
@@ -1092,8 +1092,8 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
     </entry>
     <entry>
         <title type="html"><![CDATA[小窝搭好啦！]]></title>
-        <id>http://localhost:4000/post/huan-ying/</id>
-        <link href="http://localhost:4000/post/huan-ying/">
+        <id>https://yunqian-qwq.github.io/post/huan-ying/</id>
+        <link href="https://yunqian-qwq.github.io/post/huan-ying/">
         </link>
         <updated>2020-07-21T15:12:02.000Z</updated>
         <content type="html"><![CDATA[<p>QwQ！</p>
@@ -1103,8 +1103,8 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
     </entry>
     <entry>
         <title type="html"><![CDATA[题解 P4979 【矿洞：坍塌】]]></title>
-        <id>http://localhost:4000/post/ti-jie-p4979-kuang-dong-tan-ta/</id>
-        <link href="http://localhost:4000/post/ti-jie-p4979-kuang-dong-tan-ta/">
+        <id>https://yunqian-qwq.github.io/post/ti-jie-p4979-kuang-dong-tan-ta/</id>
+        <link href="https://yunqian-qwq.github.io/post/ti-jie-p4979-kuang-dong-tan-ta/">
         </link>
         <updated>2020-07-18T14:02:02.000Z</updated>
         <content type="html"><![CDATA[<p>一道罕见的没有卡掉珂朵莉树的良心题（</p>
@@ -1488,8 +1488,8 @@ int main(void){
     </entry>
     <entry>
         <title type="html"><![CDATA[Stylish/Stylus-我的浏览器我做主]]></title>
-        <id>http://localhost:4000/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/</id>
-        <link href="http://localhost:4000/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/">
+        <id>https://yunqian-qwq.github.io/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/</id>
+        <link href="https://yunqian-qwq.github.io/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/">
         </link>
         <updated>2020-07-05T03:37:58.000Z</updated>
         <content type="html"><![CDATA[<h1 id="前言">前言</h1>
@@ -1622,7 +1622,7 @@ int main(void){
 <p>注：这个代码实际上分为两部分：代码1和代码2。</p>
 <p>修改的时候直接分别复制即可。</p>
 <figure data-type="image" tabindex="33"><a href="https://www.luogu.com.cn/paste/1wkj051t"><img src="https://s1.ax1x.com/2020/10/22/BkCAGd.png" alt="BkCAGd.png" loading="lazy"></a></figure>
-<p>（强烈推荐这个，背景是随机珂爱的图片qwq，侧栏的阴影、颜色等也是调了好久才选出的qwq）</p>
+<p>（强烈推荐这个，背景是<strong>随机</strong>（刷新一下变化一下）珂爱的图片qwq，侧栏的阴影、颜色等也是调了好久才选出的qwq）</p>
 <p>（毕竟每个图片主题色都不一样，感觉目前这个颜色应该是最适配的）</p>
 <p>（如果发现了更好的配色，欢迎私信哦）</p>
 <figure data-type="image" tabindex="34"><a href="https://www.luogu.com.cn/paste/7dirptex"><img src="https://s1.ax1x.com/2020/09/16/wgFyY8.png" alt="wgFyY8.png" loading="lazy"></a></figure>
@@ -1657,8 +1657,8 @@ int main(void){
     </entry>
     <entry>
         <title type="html"><![CDATA[2020年下学期 期末自闭记]]></title>
-        <id>http://localhost:4000/post/2020-nian-xia-xue-qi-qi-mo-zi-bi-ji/</id>
-        <link href="http://localhost:4000/post/2020-nian-xia-xue-qi-qi-mo-zi-bi-ji/">
+        <id>https://yunqian-qwq.github.io/post/2020-nian-xia-xue-qi-qi-mo-zi-bi-ji/</id>
+        <link href="https://yunqian-qwq.github.io/post/2020-nian-xia-xue-qi-qi-mo-zi-bi-ji/">
         </link>
         <updated>2020-07-04T14:16:59.000Z</updated>
         <content type="html"><![CDATA[<h2 id="说在前面">说在前面</h2>
@@ -1752,8 +1752,8 @@ D.长臂猿</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[题解 SP10500 【HAYBALE - Haybale stacking】]]></title>
-        <id>http://localhost:4000/post/ti-jie-sp10500-haybale-haybale-stacking/</id>
-        <link href="http://localhost:4000/post/ti-jie-sp10500-haybale-haybale-stacking/">
+        <id>https://yunqian-qwq.github.io/post/ti-jie-sp10500-haybale-haybale-stacking/</id>
+        <link href="https://yunqian-qwq.github.io/post/ti-jie-sp10500-haybale-haybale-stacking/">
         </link>
         <updated>2020-06-14T04:07:43.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.luogu.com.cn/problem/SP10500">题目链接</a></p>
