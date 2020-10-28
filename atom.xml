@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2020-10-28T22:38:23.483Z</updated>
+    <updated>2020-10-28T22:39:52.277Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yunqian-qwq.github.io"/>
     <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, 云浅的小窝</rights>
     <entry>
         <title type="html"><![CDATA[题解 P3987 【我永远喜欢珂朵莉~】 ]]></title>
-        <id>https://yunqian-qwq.github.io/post/ti-jie-p3987-wo-yong-yuan-xi-huan-ke-duo-li-~/</id>
-        <link href="https://yunqian-qwq.github.io/post/ti-jie-p3987-wo-yong-yuan-xi-huan-ke-duo-li-~/">
+        <id>https://yunqian-qwq.github.io/post/solution-p3987/</id>
+        <link href="https://yunqian-qwq.github.io/post/solution-p3987/">
         </link>
         <updated>2020-10-28T22:34:32.000Z</updated>
         <content type="html"><![CDATA[<p>算是<a href="https://www.luogu.com.cn/problem/P5610">大学</a>那题的弱化版？时限放到了 4s，也不强制在线了qwq</p>
@@ -1672,8 +1672,8 @@ int main(void){
     </entry>
     <entry>
         <title type="html"><![CDATA[Stylish/Stylus-我的浏览器我做主]]></title>
-        <id>https://yunqian-qwq.github.io/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/</id>
-        <link href="https://yunqian-qwq.github.io/post/stylishstylus-wo-de-liu-lan-qi-wo-zuo-zhu/">
+        <id>https://yunqian-qwq.github.io/post/stylish-stylus/</id>
+        <link href="https://yunqian-qwq.github.io/post/stylish-stylus/">
         </link>
         <updated>2020-07-05T03:37:58.000Z</updated>
         <content type="html"><![CDATA[<h1 id="前言">前言</h1>
