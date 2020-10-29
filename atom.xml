@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2020-10-29T04:55:13.194Z</updated>
+    <updated>2020-10-29T04:55:48.759Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yunqian-qwq.github.io"/>
     <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
@@ -201,7 +201,7 @@ signed main(void){
         </link>
         <updated>2020-10-12T12:01:08.000Z</updated>
         <content type="html"><![CDATA[<p>由于本 Blog 在 7-25 才搭建完毕，所以文章并不全，只是搬运了部分文章。</p>
-<p>7-25 后发表的题解，笔记等都会同步更新在此处。</p>
+<p>7-25 后发表的题解，笔记等大多都会同步更新在此处。</p>
 <p>大部分都还在以前的<a href="https://www.luogu.com.cn/blog/wwwluogucn/" title="欢迎光临~">洛谷博客</a>，欢迎来看哦~(๑• . •๑)</p>
 ]]></content>
     </entry>
