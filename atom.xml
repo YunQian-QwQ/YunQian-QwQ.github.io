@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2021-01-16T04:48:17.638Z</updated>
+    <updated>2021-01-16T05:20:59.486Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yunqian-qwq.github.io"/>
     <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
@@ -1698,58 +1698,53 @@ int main(void){
 <hr>
 <h2 id="stylishstylus-for-firefox">Stylish/Stylus for Firefox</h2>
 <p>点击右上角三个横线那里，会出现这样的画面：</p>
-<figure data-type="image" tabindex="22"><img src="https://s1.ax1x.com/2020/07/05/UpKIYj.png" alt="UpKIYj.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="22"><img src="https://i.loli.net/2021/01/16/ZjgfSris9WTVq7z.png" alt="qwq.png" loading="lazy"></figure>
 <p>单击一下，在右上角的搜索栏里搜索即可。</p>
-<figure data-type="image" tabindex="23"><img src="https://s1.ax1x.com/2020/07/05/UpKclt.png" alt="UpKclt.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="23"><img src="https://i.loli.net/2021/01/16/be5vth9NwMo8nR1.png" alt="qwq.png" loading="lazy"></figure>
 <p>搜索之后，出现了这样的画面，下载即可：</p>
-<figure data-type="image" tabindex="24"><a href="https://addons.mozilla.org/zh-CN/firefox/addon/stylish-16479/?src=search"><img src="https://s1.ax1x.com/2020/07/05/UpK2Of.png" alt="UpK2Of.png" loading="lazy"></a></figure>
-<figure data-type="image" tabindex="25"><a href="https://addons.mozilla.org/zh-CN/firefox/addon/stylish-16479/?src=search"><img src="https://s1.ax1x.com/2020/07/05/UpKg6P.png" alt="UpKg6P.png" loading="lazy"></a></figure>
-<p>（Update 7.6：其实，严格来说，这里的 Stylish 只是一个主题，能把 Firefox 的顶栏变白，并不是插件。）</p>
-<p>（Stylish For Firefox 貌似也没了，所以各位还是用下面的 Stylus 吧QwQ）</p>
-<p>（update 7.9：好吧，Stylish For Firefox 也有，我蒟蒻，我爪巴。）</p>
-<figure data-type="image" tabindex="26"><a href="https://addons.mozilla.org/zh-CN/firefox/addon/styl-us/?src=search"><img src="https://s1.ax1x.com/2020/07/05/UpKf0S.png" alt="UpKf0S.png" loading="lazy"></a></figure>
-<figure data-type="image" tabindex="27"><a href="https://addons.mozilla.org/zh-CN/firefox/addon/styl-us/?src=search"><img src="https://s1.ax1x.com/2020/07/05/UpKhTg.png" alt="UpKhTg.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="24"><a href="https://addons.mozilla.org/zh-CN/firefox/addon/styl-us/?src=search"><img src="https://i.loli.net/2021/01/16/GJ5DEl3R8irIVNM.png" alt="qwq.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="25"><a href="https://addons.mozilla.org/zh-CN/firefox/addon/styl-us/?src=search"><img src="https://i.loli.net/2021/01/16/ISt9yuw7dHCnrAj.png" alt="awa.png" loading="lazy"></a></figure>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="gray"><mtext>（单击图片进入下载地址）</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{gray}\text{（单击图片进入下载地址）}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:gray;"><span class="mord cjk_fallback" style="color:gray;">（单击图片进入下载地址）</span></span></span></span></span></p>
-<p>下载完之后，你的 Firefox 浏览器上就已经成功地下载了 Stylish/Stylus 啦！</p>
+<p>下载完之后，你的 Firefox 浏览器上就已经成功地下载了 Stylish/Stylus 啦！qwq</p>
 <hr>
 <h1 id="食用方法">食用方法</h1>
 <p>由于各个浏览器上食用 Stylish/Stylus 的方法基本一致，这里以 Chrome 为例。</p>
 <p>首先，不管是 Stylish 还是 Stylus，都需要在一个网站上下载网址美化脚本：<a href="https://userstyles.org/">https://userstyles.org/</a>（俗称 USO）。</p>
 <p>有可能访问的比较慢，是正常现象，耐心等一会就好了。</p>
 <p>进去之后，出现了这样的画面：</p>
-<figure data-type="image" tabindex="28"><img src="https://s1.ax1x.com/2020/07/05/UprkuT.png" alt="UprkuT.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="26"><img src="https://s1.ax1x.com/2020/07/05/UprkuT.png" alt="UprkuT.png" loading="lazy"></figure>
 <p>然后，直接在左上角搜索即可。以洛谷为例：</p>
-<figure data-type="image" tabindex="29"><img src="https://s1.ax1x.com/2020/07/05/UprTZF.png" alt="UprTZF.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="27"><img src="https://s1.ax1x.com/2020/07/05/UprTZF.png" alt="UprTZF.png" loading="lazy"></figure>
 <p>搜索之后会有许多结果，这里推荐「氩洛谷 - 洛谷 Argon Design」，也就是第一个搜索结果。</p>
 <p><s>甚至还发现了一个 memset0 写的<a href="https://userstyles.org/styles/164778/theme">「洛谷：我很方」</a>（</s></p>
 <p><s>不知道是不是 memset0 本人写的（</s></p>
-<figure data-type="image" tabindex="30"><a href="https://userstyles.org/styles/166554/argon-design-luogu-argon-design"><img src="https://s1.ax1x.com/2020/07/05/UprOR1.png" alt="UprOR1.png" loading="lazy"></a></figure>
-<figure data-type="image" tabindex="31"><a href="https://userstyles.org/styles/166554/argon-design-luogu-argon-design"><img src="https://s1.ax1x.com/2020/07/05/UpsAzt.png" alt="UpsAzt.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="28"><a href="https://userstyles.org/styles/166554/argon-design-luogu-argon-design"><img src="https://s1.ax1x.com/2020/07/05/UprOR1.png" alt="UprOR1.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="29"><a href="https://userstyles.org/styles/166554/argon-design-luogu-argon-design"><img src="https://s1.ax1x.com/2020/07/05/UpsAzt.png" alt="UpsAzt.png" loading="lazy"></a></figure>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="gray"><mtext>（单击图片进入下载地址）</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{gray}\text{（单击图片进入下载地址）}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:gray;"><span class="mord cjk_fallback" style="color:gray;">（单击图片进入下载地址）</span></span></span></span></span></p>
 <p>点击蓝色的 <code>Install Style</code> 下载即可。</p>
 <p>下载之后，再看看洛谷，变成了这样：</p>
-<figure data-type="image" tabindex="32"><img src="https://s1.ax1x.com/2020/07/05/UpshYd.png" alt="UpshYd.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="30"><img src="https://s1.ax1x.com/2020/07/05/UpshYd.png" alt="UpshYd.png" loading="lazy"></figure>
 <p>是不是好看一点了呢？</p>
 <p>如果觉得这样不好看，还可以点击 <code>Customize Settings</code>，自定义设置：</p>
-<figure data-type="image" tabindex="33"><img src="https://s1.ax1x.com/2020/07/05/Ups7Of.png" alt="Ups7Of.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="31"><img src="https://s1.ax1x.com/2020/07/05/Ups7Of.png" alt="Ups7Of.png" loading="lazy"></figure>
 <p>点击之后，就可以自定义设置主题/背景/侧栏等东西了qwq。</p>
 <p><strong>注意：自定义设置前，请先刷新一下，然后再自定义设置，点击<code>Update Style</code>即可。记住，一定要先刷新！不然<code>Update Style</code>是不会出来滴~</strong></p>
 <p>如果这点自定义设置的不过瘾，可以直接去调 CSS 代码，方法如下：</p>
 <p>首先，点击右上角的插件图标，单击那三个点，然后选择「管理样式」。</p>
-<figure data-type="image" tabindex="34"><img src="https://s1.ax1x.com/2020/10/22/BkpLct.png" alt="BkpLct.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="32"><img src="https://s1.ax1x.com/2020/10/22/BkpLct.png" alt="BkpLct.png" loading="lazy"></figure>
 <p>然后会出现这样的画面，如果使用 Stylish，需要单击「修改」；如果使用的是 Stylus，直接点一下就行了qwq。</p>
-<figure data-type="image" tabindex="35"><img src="https://s1.ax1x.com/2020/07/05/Up6Eb8.png" alt="Up6Eb8.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="33"><img src="https://s1.ax1x.com/2020/07/05/Up6Eb8.png" alt="Up6Eb8.png" loading="lazy"></figure>
 <p>（Stylish）</p>
-<figure data-type="image" tabindex="36"><img src="https://s1.ax1x.com/2020/10/22/Bk9U4H.png" alt="Bk9U4H.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="34"><img src="https://s1.ax1x.com/2020/10/22/Bk9U4H.png" alt="Bk9U4H.png" loading="lazy"></figure>
 <p>（Stylus）</p>
 <p>会出现这样的画面：</p>
-<figure data-type="image" tabindex="37"><img src="https://s1.ax1x.com/2020/07/05/Up6TZ8.png" alt="Up6TZ8.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="35"><img src="https://s1.ax1x.com/2020/07/05/Up6TZ8.png" alt="Up6TZ8.png" loading="lazy"></figure>
 <p>然后就可以尽情地修改 CSS 代码啦QwQ，不过最好不要乱改，免得改错。</p>
 <p>这里给出几个氩洛谷的 CSS 代码+效果（点击图片就可以了qwq</p>
 <p>注：这个代码其实分为两部分：代码1、代码2；修改的时候直接分别复制即可。</p>
-<figure data-type="image" tabindex="38"><a href="https://www.luogu.com.cn/paste/7dirptex"><img src="https://s1.ax1x.com/2020/09/16/wgFyY8.png" alt="wgFyY8.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="36"><a href="https://www.luogu.com.cn/paste/7dirptex"><img src="https://s1.ax1x.com/2020/09/16/wgFyY8.png" alt="wgFyY8.png" loading="lazy"></a></figure>
 <p>（夏目玲子）</p>
-<figure data-type="image" tabindex="39"><a href="https://www.luogu.com.cn/paste/h4u0w9xz"><img src="https://s1.ax1x.com/2020/10/22/BkFszj.png" alt="BkFszj.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="37"><a href="https://www.luogu.com.cn/paste/h4u0w9xz"><img src="https://s1.ax1x.com/2020/10/22/BkFszj.png" alt="BkFszj.png" loading="lazy"></a></figure>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathsize="0.9em"><mstyle mathcolor="#0095D9"><mtext mathvariant="sans-serif">(『君指先跃动の光は、私の一生不変の信仰に、唯私のお姉さま永生き！』)</mtext></mstyle></mstyle></mrow><annotation encoding="application/x-tex">
 \small\color{#0095D9}\textsf{(『君指先跃动の光は、私の一生不変の信仰に、唯私のお姉さま永生き！』)}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9em;vertical-align:-0.225em;"></span><span class="mord text sizing reset-size6 size5" style="color:#0095D9;"><span class="mord textsf" style="color:#0095D9;">(</span><span class="mord textsf cjk_fallback" style="color:#0095D9;">『君指先跃动の光は、私の一生不変の信仰に、唯私のお姉さま永生き！』</span><span class="mord textsf" style="color:#0095D9;">)</span></span></span></span></span></p>
@@ -1759,7 +1754,7 @@ int main(void){
 <p>考完期末来写吧qwq</p>
 <hr>
 <p>还有一种方法，也可以快速地查询某个网站的 Style：</p>
-<figure data-type="image" tabindex="40"><img src="https://s1.ax1x.com/2020/07/05/UpRIpQ.png" alt="UpRIpQ.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="38"><img src="https://s1.ax1x.com/2020/07/05/UpRIpQ.png" alt="UpRIpQ.png" loading="lazy"></figure>
 <p>直接点击右上角的图标，然后选择「为此网站查找更多样式」即可。</p>
 <hr>
 <p>其他网站的美化方法，也差不多就是这样啦QwQ。</p>
