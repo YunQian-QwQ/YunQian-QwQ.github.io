@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2021-01-16T05:24:04.502Z</updated>
+    <updated>2021-01-16T08:09:29.473Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yunqian-qwq.github.io"/>
     <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
@@ -1627,12 +1627,10 @@ int main(void){
 <hr>
 <h1 id="食用效果">食用效果</h1>
 <p>放几张图：</p>
-<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/09/16/wgFGFK.png" alt="US7oRK.png" loading="lazy"></figure>
-<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/09/16/wgFayd.png" alt="wgFayd.png" loading="lazy"></figure>
-<figure data-type="image" tabindex="5"><img src="https://s1.ax1x.com/2020/09/16/wgFyY8.png" alt="wgFyY8.png" loading="lazy"></figure>
-<figure data-type="image" tabindex="6"><img src="https://s1.ax1x.com/2020/09/16/wgF2lQ.png" alt="wgF2lQ.png" loading="lazy"></figure>
-<figure data-type="image" tabindex="7"><img src="https://s1.ax1x.com/2020/07/05/U9amJx.png" alt="U9amJx.png" loading="lazy"></figure>
-<figure data-type="image" tabindex="8"><img src="https://s1.ax1x.com/2020/07/05/U9ULLQ.jpg" alt="U9ULLQ.jpg" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2021/01/16/S2MXP3hskLgciQn.png" alt="qwq.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2021/01/16/MwlfHkK8R6u9LnG.png" alt="qwq.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2021/01/16/hWCgIP5RMQuktLm.png" alt="qwq.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://i.loli.net/2021/01/16/6pPkznHxmrtLeNM.png" alt="qwq.png" loading="lazy"></figure>
 <hr>
 <h1 id="下载方法">下载方法</h1>
 <p>由于各个浏览器上安装 Stylus/Stylish 的方法都不相同，所以，这里会讲一些常见浏览器安装 Stylus/Stylish 的方法。</p>
@@ -1651,18 +1649,18 @@ int main(void){
 <p>有一点需要注意，一定要等加载完毕之后再点击中间的 「download」 啊qwq，不然可能会出来一些奇奇怪怪的东西（</p>
 <p>然后就目前最新版的 chrome 浏览器来说，直接把 <code>.crx</code> 文件拽进去会出现一个 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>CRX-HEADER-INVALID</mtext></mrow><annotation encoding="application/x-tex">\text{CRX-HEADER-INVALID}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord">CRX-HEADER-INVALID</span></span></span></span></span>，没事没事，不慌qwq</p>
 <p>咱们先暴力把这东西后缀名改为 <code>.zip</code>，对，暴力重命名就行。</p>
-<figure data-type="image" tabindex="9"><img src="https://s3.ax1x.com/2021/01/15/sBPtZ8.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://s3.ax1x.com/2021/01/15/sBPtZ8.png" alt="" loading="lazy"></figure>
 <p>然后暴力解压出来一个文件夹qwq</p>
-<figure data-type="image" tabindex="10"><img src="https://s3.ax1x.com/2021/01/15/sBPyLV.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://s3.ax1x.com/2021/01/15/sBPyLV.png" alt="" loading="lazy"></figure>
 <p>这一部可能有些解压软件会炸掉，这里推荐用 <code>ezip</code> 解压w</p>
 <p>Windows 自带的 WinRAR 没试过，有时间我会试试的w，估计要咕到期末后了（</p>
 <p>然后不管您用什么软件/网站/乱搞解压成功了，完事之后点进文件夹看一看，如果是类似这种样子：</p>
-<figure data-type="image" tabindex="11"><img src="https://s3.ax1x.com/2021/01/15/sBPTL6.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://s3.ax1x.com/2021/01/15/sBPTL6.png" alt="" loading="lazy"></figure>
 <p>那基本就没啥问题了awa。</p>
 <p>接着进入 <a href="chrome://extensions/">chrome://extensions/</a>，点开右上角的「开发者模式」，然后会出来三个选项：</p>
-<figure data-type="image" tabindex="12"><img src="https://s3.ax1x.com/2021/01/15/sBiNOx.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="https://s3.ax1x.com/2021/01/15/sBiNOx.png" alt="" loading="lazy"></figure>
 <p>点最左边的那个，找到解压出来的 <code>Stylus</code> 文件夹，选中，搞<s>♂</s>进去就行了qwq。</p>
-<figure data-type="image" tabindex="13"><img src="https://s3.ax1x.com/2021/01/15/sBi3Y4.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="https://s3.ax1x.com/2021/01/15/sBi3Y4.png" alt="" loading="lazy"></figure>
 <p>无内鬼的话，这一步做完，我们就成功搞出来了 <code>Stylus</code> qwq。</p>
 <p>下载完之后，你的 Chrome 上就已经成功地下载了 Stylus/Stylish 啦！Chrome 用户可以跳过下面的 Stylus/Stylish For 360/Firefox，直接看「食用方法」。</p>
 <hr>
@@ -1671,62 +1669,57 @@ int main(void){
 <p>不过，360 浏览器也有个好处：不用翻墙登外网啦！ヾ(@<sup>▽</sup>@)ノ</p>
 <p>进入 360 的应用商店。<a href="https://ext.chrome.360.cn/webstore/category/%E5%B0%8F%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E6%8E%A8%E8%8D%90">Link</a></p>
 <p>在右上角搜索 <code>Stylus</code>，搜索结果如下：</p>
-<figure data-type="image" tabindex="14"><img src="https://i.loli.net/2020/07/05/WvkqaZDz8tAoX4e.png" alt="截屏2020-07-05 下午3.44.41.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="https://i.loli.net/2020/07/05/WvkqaZDz8tAoX4e.png" alt="截屏2020-07-05 下午3.44.41.png" loading="lazy"></figure>
 <p>单击第一个搜索结果，下载即可。</p>
-<figure data-type="image" tabindex="15"><a href="https://ext.chrome.360.cn/webstore/detail/apmmpaebfobifelkijhaljbmpcgbjbdo"><img src="https://i.loli.net/2020/07/05/9jEZVrYNkeplubI.png" alt="截屏2020-07-05 下午3.46.16.png" loading="lazy"></a></figure>
-<figure data-type="image" tabindex="16"><a href="https://ext.chrome.360.cn/webstore/detail/apmmpaebfobifelkijhaljbmpcgbjbdo"><img src="https://i.loli.net/2020/07/05/HKJ6Vc4xYGeFvd8.png" alt="截屏2020-07-05 下午3.46.21.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="13"><a href="https://ext.chrome.360.cn/webstore/detail/apmmpaebfobifelkijhaljbmpcgbjbdo"><img src="https://i.loli.net/2020/07/05/9jEZVrYNkeplubI.png" alt="截屏2020-07-05 下午3.46.16.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="14"><a href="https://ext.chrome.360.cn/webstore/detail/apmmpaebfobifelkijhaljbmpcgbjbdo"><img src="https://i.loli.net/2020/07/05/HKJ6Vc4xYGeFvd8.png" alt="截屏2020-07-05 下午3.46.21.png" loading="lazy"></a></figure>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="gray"><mtext>（单击图片进入下载地址）</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{gray}\text{（单击图片进入下载地址）}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:gray;"><span class="mord cjk_fallback" style="color:gray;">（单击图片进入下载地址）</span></span></span></span></span></p>
 <p>下载完之后，你的 360 浏览器上就已经成功地下载了 Stylus 啦！360 浏览器用户可以跳过下面的 Stylus/Stylish For Firefox，直接看「食用方法」。</p>
 <hr>
 <h2 id="stylishstylus-for-firefox">Stylish/Stylus for Firefox</h2>
-<p>点击右上角三个横线那里，会出现这样的画面：</p>
-<figure data-type="image" tabindex="17"><img src="https://i.loli.net/2021/01/16/ZjgfSris9WTVq7z.png" alt="qwq.png" loading="lazy"></figure>
+<p>点击右上角三个横线那里，会变成这样：</p>
+<figure data-type="image" tabindex="15"><img src="https://i.loli.net/2021/01/16/ZjgfSris9WTVq7z.png" alt="qwq.png" loading="lazy"></figure>
 <p>单击一下，在右上角的搜索栏里搜索即可。</p>
-<figure data-type="image" tabindex="18"><img src="https://i.loli.net/2021/01/16/be5vth9NwMo8nR1.png" alt="qwq.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="16"><img src="https://i.loli.net/2021/01/16/be5vth9NwMo8nR1.png" alt="qwq.png" loading="lazy"></figure>
 <p>搜索之后，出现了这样的画面，下载即可：</p>
-<figure data-type="image" tabindex="19"><a href="https://addons.mozilla.org/zh-CN/firefox/addon/styl-us/?src=search"><img src="https://i.loli.net/2021/01/16/GJ5DEl3R8irIVNM.png" alt="qwq.png" loading="lazy"></a></figure>
-<figure data-type="image" tabindex="20"><a href="https://addons.mozilla.org/zh-CN/firefox/addon/styl-us/?src=search"><img src="https://i.loli.net/2021/01/16/ISt9yuw7dHCnrAj.png" alt="awa.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="17"><a href="https://addons.mozilla.org/zh-CN/firefox/addon/styl-us/?src=search"><img src="https://i.loli.net/2021/01/16/GJ5DEl3R8irIVNM.png" alt="qwq.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="18"><a href="https://addons.mozilla.org/zh-CN/firefox/addon/styl-us/?src=search"><img src="https://i.loli.net/2021/01/16/ISt9yuw7dHCnrAj.png" alt="awa.png" loading="lazy"></a></figure>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="gray"><mtext>（单击图片进入下载地址）</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{gray}\text{（单击图片进入下载地址）}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:gray;"><span class="mord cjk_fallback" style="color:gray;">（单击图片进入下载地址）</span></span></span></span></span></p>
 <p>下载完之后，你的 Firefox 浏览器上就已经成功地下载了 Stylish/Stylus 啦！qwq</p>
 <hr>
 <h1 id="食用方法">食用方法</h1>
 <p>由于各个浏览器上食用 Stylish/Stylus 的方法基本一致，这里以 Chrome 为例。</p>
-<p>首先，不管是 Stylish 还是 Stylus，都需要在一个网站上下载网址美化脚本：<a href="https://userstyles.org/">https://userstyles.org/</a>（俗称 USO）。</p>
+<p>首先，不管是 Stylish 还是 Stylus，都需要在一个网站上下载网址美化脚本：<a href="https://userstyles.org/">https://userstyles.org/</a>。</p>
 <p>有可能访问的比较慢，是正常现象，耐心等一会就好了。</p>
 <p>进去之后，出现了这样的画面：</p>
-<figure data-type="image" tabindex="21"><img src="https://s1.ax1x.com/2020/07/05/UprkuT.png" alt="UprkuT.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="19"><img src="https://i.loli.net/2021/01/16/yXgkuTDwGi6LV9O.png" alt="qwq.png" loading="lazy"></figure>
 <p>然后，直接在左上角搜索即可。以洛谷为例：</p>
-<figure data-type="image" tabindex="22"><img src="https://s1.ax1x.com/2020/07/05/UprTZF.png" alt="UprTZF.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="20"><img src="https://i.loli.net/2021/01/16/m1upwKH8AzLVk2M.png" alt="www.png" loading="lazy"></figure>
 <p>搜索之后会有许多结果，这里推荐「氩洛谷 - 洛谷 Argon Design」，也就是第一个搜索结果。</p>
-<p><s>甚至还发现了一个 memset0 写的<a href="https://userstyles.org/styles/164778/theme">「洛谷：我很方」</a>（</s></p>
-<p><s>不知道是不是 memset0 本人写的（</s></p>
-<figure data-type="image" tabindex="23"><a href="https://userstyles.org/styles/166554/argon-design-luogu-argon-design"><img src="https://s1.ax1x.com/2020/07/05/UprOR1.png" alt="UprOR1.png" loading="lazy"></a></figure>
-<figure data-type="image" tabindex="24"><a href="https://userstyles.org/styles/166554/argon-design-luogu-argon-design"><img src="https://s1.ax1x.com/2020/07/05/UpsAzt.png" alt="UpsAzt.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="21"><a href="https://userstyles.org/styles/166554/argon-design-luogu-argon-design"><img src="https://i.loli.net/2021/01/16/kLe2FnYgfKMrAma.png" alt="www.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="22"><a href="https://userstyles.org/styles/166554/argon-design-luogu-argon-design"><img src="https://i.loli.net/2021/01/16/T8kACIEb4r5N6W7.png" alt="image.png" loading="lazy"></a></figure>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="gray"><mtext>（单击图片进入下载地址）</mtext></mstyle></mrow><annotation encoding="application/x-tex">\color{gray}\text{（单击图片进入下载地址）}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text" style="color:gray;"><span class="mord cjk_fallback" style="color:gray;">（单击图片进入下载地址）</span></span></span></span></span></p>
 <p>点击蓝色的 <code>Install Style</code> 下载即可。</p>
 <p>下载之后，再看看洛谷，变成了这样：</p>
-<figure data-type="image" tabindex="25"><img src="https://s1.ax1x.com/2020/07/05/UpshYd.png" alt="UpshYd.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="23"><img src="https://i.loli.net/2021/01/16/4V7WTMIg2qBwsJO.png" alt="qwq.png" loading="lazy"></figure>
 <p>是不是好看一点了呢？</p>
 <p>如果觉得这样不好看，还可以点击 <code>Customize Settings</code>，自定义设置：</p>
-<figure data-type="image" tabindex="26"><img src="https://s1.ax1x.com/2020/07/05/Ups7Of.png" alt="Ups7Of.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="24"><img src="https://i.loli.net/2021/01/16/PjrmtbKlupHeLCE.png" alt="image.png" loading="lazy"></figure>
 <p>点击之后，就可以自定义设置主题/背景/侧栏等东西了qwq。</p>
 <p><strong>注意：自定义设置前，请先刷新一下，然后再自定义设置，点击<code>Update Style</code>即可。记住，一定要先刷新！不然<code>Update Style</code>是不会出来滴~</strong></p>
 <p>如果这点自定义设置的不过瘾，可以直接去调 CSS 代码，方法如下：</p>
 <p>首先，点击右上角的插件图标，单击那三个点，然后选择「管理样式」。</p>
-<figure data-type="image" tabindex="27"><img src="https://s1.ax1x.com/2020/10/22/BkpLct.png" alt="BkpLct.png" loading="lazy"></figure>
-<p>然后会出现这样的画面，如果使用 Stylish，需要单击「修改」；如果使用的是 Stylus，直接点一下就行了qwq。</p>
-<figure data-type="image" tabindex="28"><img src="https://s1.ax1x.com/2020/07/05/Up6Eb8.png" alt="Up6Eb8.png" loading="lazy"></figure>
-<p>（Stylish）</p>
-<figure data-type="image" tabindex="29"><img src="https://s1.ax1x.com/2020/10/22/Bk9U4H.png" alt="Bk9U4H.png" loading="lazy"></figure>
-<p>（Stylus）</p>
-<p>会出现这样的画面：</p>
-<figure data-type="image" tabindex="30"><img src="https://s1.ax1x.com/2020/07/05/Up6TZ8.png" alt="Up6TZ8.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="25"><img src="https://s1.ax1x.com/2020/10/22/BkpLct.png" alt="BkpLct.png" loading="lazy"></figure>
+<p>然后会出现这样的画面，直接点一下就行了qwq。</p>
+<figure data-type="image" tabindex="26"><img src="https://s1.ax1x.com/2020/10/22/Bk9U4H.png" alt="Bk9U4H.png" loading="lazy"></figure>
+<p>接着：</p>
+<figure data-type="image" tabindex="27"><img src="https://s1.ax1x.com/2020/07/05/Up6TZ8.png" alt="Up6TZ8.png" loading="lazy"></figure>
 <p>然后就可以尽情地修改 CSS 代码啦QwQ，不过最好不要乱改，免得改错。</p>
 <p>这里给出几个氩洛谷的 CSS 代码+效果（点击图片就可以了qwq</p>
 <p>注：这个代码其实分为两部分：代码1、代码2；修改的时候直接分别复制即可。</p>
-<figure data-type="image" tabindex="31"><a href="https://www.luogu.com.cn/paste/7dirptex"><img src="https://s1.ax1x.com/2020/09/16/wgFyY8.png" alt="wgFyY8.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="28"><a href="https://www.luogu.com.cn/paste/7dirptex"><img src="https://s1.ax1x.com/2020/09/16/wgFyY8.png" alt="wgFyY8.png" loading="lazy"></a></figure>
 <p>（夏目玲子）</p>
-<figure data-type="image" tabindex="32"><a href="https://www.luogu.com.cn/paste/h4u0w9xz"><img src="https://s1.ax1x.com/2020/10/22/BkFszj.png" alt="BkFszj.png" loading="lazy"></a></figure>
+<figure data-type="image" tabindex="29"><a href="https://www.luogu.com.cn/paste/h4u0w9xz"><img src="https://s1.ax1x.com/2020/10/22/BkFszj.png" alt="BkFszj.png" loading="lazy"></a></figure>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathsize="0.9em"><mstyle mathcolor="#0095D9"><mtext mathvariant="sans-serif">(『君指先跃动の光は、私の一生不変の信仰に、唯私のお姉さま永生き！』)</mtext></mstyle></mstyle></mrow><annotation encoding="application/x-tex">
 \small\color{#0095D9}\textsf{(『君指先跃动の光は、私の一生不変の信仰に、唯私のお姉さま永生き！』)}
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9em;vertical-align:-0.225em;"></span><span class="mord text sizing reset-size6 size5" style="color:#0095D9;"><span class="mord textsf" style="color:#0095D9;">(</span><span class="mord textsf cjk_fallback" style="color:#0095D9;">『君指先跃动の光は、私の一生不変の信仰に、唯私のお姉さま永生き！』</span><span class="mord textsf" style="color:#0095D9;">)</span></span></span></span></span></p>
@@ -1736,7 +1729,7 @@ int main(void){
 <p>考完期末来写吧qwq</p>
 <hr>
 <p>还有一种方法，也可以快速地查询某个网站的 Style：</p>
-<figure data-type="image" tabindex="33"><img src="https://s1.ax1x.com/2020/07/05/UpRIpQ.png" alt="UpRIpQ.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="30"><img src="https://s1.ax1x.com/2020/07/05/UpRIpQ.png" alt="UpRIpQ.png" loading="lazy"></figure>
 <p>直接点击右上角的图标，然后选择「为此网站查找更多样式」即可。</p>
 <hr>
 <p>其他网站的美化方法，也差不多就是这样啦QwQ。</p>
