@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2021-01-18T10:17:34.250Z</updated>
+    <updated>2021-01-18T10:20:50.614Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yunqian-qwq.github.io"/>
     <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
@@ -1628,7 +1628,7 @@ int main(void){
 <h1 id="食用效果">食用效果</h1>
 <p>放几张图：</p>
 <figure data-type="image" tabindex="3"><img src="https://i.loli.net/2021/01/16/S2MXP3hskLgciQn.png" alt="qwq.png" loading="lazy"></figure>
-<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2021/01/16/MwlfHkK8R6u9LnG.png" alt="qwq.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><a href="https://www.luogu.com.cn/blog/wwwluogucn/solution-p3987" title="悄悄宣传一波题解没人发现吧qwq"><img src="https://i.loli.net/2021/01/16/MwlfHkK8R6u9LnG.png" alt="qwq.png" loading="lazy"></a></figure>
 <figure data-type="image" tabindex="5"><img src="https://i.loli.net/2021/01/16/hWCgIP5RMQuktLm.png" alt="qwq.png" loading="lazy"></figure>
 <figure data-type="image" tabindex="6"><img src="https://i.loli.net/2021/01/16/6pPkznHxmrtLeNM.png" alt="qwq.png" loading="lazy"></figure>
 <hr>
