@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yunqian-qwq.github.io</id>
     <title>云浅的小窝</title>
-    <updated>2021-01-29T18:05:02.152Z</updated>
+    <updated>2021-02-01T10:26:49.334Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yunqian-qwq.github.io"/>
     <link rel="self" href="https://yunqian-qwq.github.io/atom.xml"/>
@@ -16,9 +16,7 @@
         <link href="https://yunqian-qwq.github.io/post/solution-CF1476-ABD/">
         </link>
         <updated>2021-01-29T18:04:30.000Z</updated>
-        <content type="html"><![CDATA[<p>虽说管理员还没爬题目，不过估计云浅明早会直接睡到中午十二点，所以提前把题解水上（</p>
-<p><s>然而写题解的真实原因是最近掉橙了，要开始氵题解赚咕值了</s></p>
-<p>如果写错了求求不要 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>hack</mtext></mrow><annotation encoding="application/x-tex">\text{hack}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">hack</span></span></span></span></span> 啊呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜</p>
+        <content type="html"><![CDATA[<p>如果写错了求求不要 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>hack</mtext></mrow><annotation encoding="application/x-tex">\text{hack}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">hack</span></span></span></span></span> 啊呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜呜</p>
 <p>云浅太菜啦/kel，只做了ABD/kel</p>
 <figure data-type="image" tabindex="1"><img src="https://s3.ax1x.com/2021/01/30/yFE6Qx.png" alt="" loading="lazy"></figure>
 <p><a href="%22%E6%AC%A2%E8%BF%8E%E5%85%89%E4%B8%B4%EF%BC%81QAQ%22">珂能更好的阅读体验</a></p>
